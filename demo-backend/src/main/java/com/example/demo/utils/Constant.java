@@ -18,6 +18,19 @@ public class Constant {
 	public static final String CONTACT_ALREADY_EXISTS ="CONTACT_ALREADY_EXISTS";
 	public static final String CONTACT_CONSTRAINT_VIOLATION ="CONTACT_CONSTRAINT_VIOLATION";
 	public static final String UNKNOWN_ERROR ="UNKNOWN_ERROR";
+//	añadimos menús
+	public static final String MENU_REQUIRED="MENU_REQUIRED";
+	public static final String PLATO1_REQUIRED="PLATO1_REQUIRED";
+	public static final String PLATO2_REQUIRED= "PLATO2_REQUIRED";
+	public static final String POSTRE_REQUIRED="POSTRE_REQUIRED";
+	public static final String PRECIO_REQUIRED="PRECIO_REQUIRED";
+	public static final String MENU_NOT_EXISTS="MENU_NOT_EXISTS";
+	public static final String MENU_EDIT_SUCCESS ="MENU_EDIT_SUCCESS";
+	public static final String MENU_NOT_EDIT ="MENU_NOT_EDIT";
+	public static final String MENU_DELETE_SUCCESS ="MENU_DELETE_SUCCESS";
+	public static final String MENU_NOT_DELETE ="MENU_NOT_DELETE";
+	public static final String MENU_CREATE_SUCCESS ="MENU_CREATE_SUCCESS";
+	public static final String MENU_NOT_CREATED ="MENU_NOT_CREATED";
 	
 	//Contact message
 	public static final String CONTACT_CREATE_SUCCESS ="CONTACT_CREATE_SUCCESS";
