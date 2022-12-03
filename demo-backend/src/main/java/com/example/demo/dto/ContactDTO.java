@@ -25,7 +25,7 @@ public class ContactDTO {
 	@NotEmpty(message = Constant.EMAIL_REQUIRED)
 	private String email;
 
-
+//comentario
 	public Integer getId() {
 		return id;
 	}
