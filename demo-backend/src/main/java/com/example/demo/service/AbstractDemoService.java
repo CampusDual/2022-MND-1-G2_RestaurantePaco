@@ -32,7 +32,7 @@ public class AbstractDemoService {
 				contactRequest.getSurname2(), contactRequest.getPhone(), contactRequest.getEmail());
 	}
 	public Menus fromEditMenusRequest(Menus menusRequest) {
-		return new Menus(menusRequest.getId(),menusRequest.getPlato1(), menusRequest.getPlato2(), menusRequest.getPostre(),
+		return new Menus(menusRequest.getIdMenu(),menusRequest.getPlato1(), menusRequest.getPlato2(), menusRequest.getPostre(),
 				menusRequest.getPrecio());
 	}
 

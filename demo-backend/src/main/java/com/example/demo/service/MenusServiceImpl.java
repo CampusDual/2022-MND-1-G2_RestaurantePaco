@@ -83,7 +83,7 @@ public class MenusServiceImpl extends AbstractDemoService implements IMenusServi
 	public Integer editMenus(MenusDTO editMenusRequest) {
 		Menus menus = MenusMapper.INSTANCE.menusDTOtomenus(editMenusRequest);
 		Menus editMenus = menusRepository.save(fromEditMenusRequest(menus));
-		return editMenus.getId();
+		return editMenus.getIdMenu();
 	
 	}
 

@@ -16,7 +16,7 @@ public class Menus implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer idMenu; // cambiado por Angy
 	
 	@Column(nullable=false)
 	private String plato1;
@@ -44,21 +44,21 @@ public class Menus implements Serializable{
 	}
 
 
-	public Menus(Integer id, String plato1, String plato2, String postre, Integer precio) {
+	public Menus(Integer idMenu, String plato1, String plato2, String postre, Integer precio) {
 		this(plato1, plato2, postre,precio);
-		this.id = id;
+		this.idMenu = idMenu;
 	}
 
 
 
-	public Integer getId() {
-		return id;
+	public Integer getIdMenu() {
+		return idMenu;
 	}
 
 
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdMenu(Integer idMenu) {
+		this.idMenu = idMenu;
 	}
 
 
