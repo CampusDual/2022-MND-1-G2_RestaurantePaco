@@ -110,7 +110,7 @@ public class MenusController {
 	 *         independientemente de las mayúsculas.
 	 * @since 0.0.5
 	 */
-	@GetMapping(path = "/getMenus")
+	@GetMapping(path = "/findAllMenus") // cambiado por Angy
 	@PreAuthorize("hasAnyAuthority('MENUS')")
 	public @ResponseBody List<MenusDTO> findAll() {
 		LOGGER.info("findAll in progress...");
