@@ -53,13 +53,13 @@ public class MenusController {
 	 */
 	@GetMapping("/getMenus")
 	@PreAuthorize("hasAnyAuthority('MENUS')")
-	public ResponseEntity<?> getMenus(@RequestParam(value = "id") Integer id) {
+	public ResponseEntity<?> getMenus(@RequestParam(value = "idMenu") Integer idMenu) {
 		LOGGER.info("getMenus in progress...");
 		MenusDTO menus = null;
 		Map<String, Object> response = new HashMap<>();
 		ResponseEntity<?> re = null;
 		try {
-			menus = menusService.getMenus(id);
+			menus = menusService.getMenus(idMenu);
 			if (menus == null) {
 				response.put(Constant.MESSAGE, Constant.MENU_NOT_EXISTS);
 				response.put(Constant.RESPONSE_CODE, ResponseCodeEnum.KO.getValue());

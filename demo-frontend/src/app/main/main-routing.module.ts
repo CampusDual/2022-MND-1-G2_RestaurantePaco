@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { AuthGuard } from '../auth/auth.guard';
-import { ContactsComponent } from './contacts/contacts.component';
+import { MenushomeComponent } from './menus/menushome/menushome.component';
 
 const routes: Routes = [
   {
@@ -10,15 +10,15 @@ const routes: Routes = [
     component: MainHomeComponent,
     canActivate: [AuthGuard],
     data: {
-      allowedRoles: ['CONTACTS'],
+      allowedRoles: ['MENUS'],
     },
   },
   {
-    path: 'contacts',
-    component: ContactsComponent,
+    path: 'menus',
+    component: MenushomeComponent,
     canActivate: [AuthGuard],
     data: {
-      allowedRoles: ['CONTACTS'],
+      allowedRoles: ['MENUS'],
     },
   },
 ];

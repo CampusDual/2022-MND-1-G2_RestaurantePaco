@@ -16,4 +16,6 @@ export const API_CONFIG = {
   editContact: environment.contactsBaseUrl + '/editContact',
   deleteContact: environment.contactsBaseUrl + '/deleteContact',
 
+   // Menus API
+   getMenus: environment.menusBaseUrl + '/getMenus',
 };

@@ -25,6 +25,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./contacts.component.scss'],
 })
 export class ContactsComponent implements OnInit, AfterViewInit {
+[x: string]: any;
   dataSource: ContactDataSource;
   displayedColumns = [
     'select',
@@ -47,7 +48,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   @ViewChild('input') input: ElementRef;
 
   constructor(
-    private contactService: ContactService,
+    private contactService: ContactService, 
     private translate: TranslateService,
     private router: Router,
     private dialog: MatDialog
@@ -111,15 +112,11 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
-  isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource.contactsSubject.value.length;
-    return numSelected === numRows;
-  }
+  
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
-    this.isAllSelected()
+    this['isAllSelected']()
       ? this.selection.clear()
       : this.dataSource.contactsSubject.value.forEach((row) =>
           this.selection.select(row)
