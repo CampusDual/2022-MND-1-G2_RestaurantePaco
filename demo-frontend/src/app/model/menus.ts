@@ -1,5 +1,5 @@
 export class Menus {
-    id: number;
+    idMenu: number;
     plato1: string;
     plato2: string;
     postre: string;

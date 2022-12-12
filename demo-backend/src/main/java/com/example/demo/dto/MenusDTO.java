@@ -7,7 +7,7 @@ import com.example.demo.utils.Constant;
 
 public class MenusDTO {
 
-	private Integer id;
+	private Integer idMenu;
 	@NotEmpty(message = Constant.PLATO1_REQUIRED)
 	private String plato1;
 	
@@ -20,12 +20,12 @@ public class MenusDTO {
 	@NotNull(message = Constant.PRECIO_REQUIRED)
 	private Integer precio;
 
-	public Integer getId() {
-		return id;
+	public Integer getIdMenu() {
+		return idMenu;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdMenu(Integer id) {
+		this.idMenu = id;
 	}
 
 	public String getPlato1() {

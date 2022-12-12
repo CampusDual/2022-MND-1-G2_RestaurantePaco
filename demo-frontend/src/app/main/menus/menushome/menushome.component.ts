@@ -122,6 +122,6 @@ selection = new SelectionModel<Menus>(true, []);
 
   onEdit(row: Menus) {
     this.highlightedRow = row;
-    this.router.navigate(['/menus/edit/' + row.id]);
+    this.router.navigate(['/menus/edit/' + row.idMenu]);
   }
 }

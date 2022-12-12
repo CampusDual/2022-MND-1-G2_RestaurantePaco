@@ -32,10 +32,11 @@
           <mat-header-cell *matHeaderCellDef mat-sort-header>
             {{ "ID Menu" | translate }}
           </mat-header-cell>
-          <mat-cell *matCellDef="let row" data-label="idMenu">
-            {{ row.idMenu }}
+          <mat-cell *matCellDef="let row"   data-label="idMenu">
+            {{row.idMenu}}
           </mat-cell>
         </ng-container>
+        
   
         <ng-container matColumnDef="plato1">
           <mat-header-cell *matHeaderCellDef mat-sort-header>
@@ -79,7 +80,7 @@
           (click)="onEdit(row)"
           class="row-link"
           [style.background]="
-            highlightedRow && highlightedRow.id === row.id
+            highlightedRow && highlightedRow.idMenu === row.idMenu
               ? 'rgba(0, 0, 0, 0.15)'
               : ''
           "

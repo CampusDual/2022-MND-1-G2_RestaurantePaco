@@ -178,7 +178,7 @@ public class MenusController {
 	public ResponseEntity<Map<String, Object>> editMenus(@Valid @RequestBody MenusDTO editMenusRequest, BindingResult result) {
 		LOGGER.info("editMenus in progress...");
 		int id = 0;
-		MenusDTO menusOlder = menusService.getMenus(editMenusRequest.getId());
+		MenusDTO menusOlder = menusService.getMenus(editMenusRequest.getIdMenu());
 		Map<String, Object> response = new HashMap<>();
 		HttpStatus status = HttpStatus.CREATED;
 		String message = Constant.MENU_EDIT_SUCCESS;
