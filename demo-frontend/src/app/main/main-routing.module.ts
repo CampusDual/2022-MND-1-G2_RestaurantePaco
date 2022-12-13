@@ -11,7 +11,7 @@ const routes: Routes = [
     component: MainHomeComponent,
     canActivate: [AuthGuard],
     data: {
-      allowedRoles: ['CONTACTS', 'MENUS']
+      allowedRoles: ['CONTACTS', 'MENUS'],
   
     },
   },

@@ -5,11 +5,12 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { debounceTime, distinctUntilChanged, fromEvent, merge, tap } from 'rxjs';
+import { debounceTime, distinctUntilChanged, fromEvent, merge, Observable, Observer, tap } from 'rxjs';
 import { MenusDataSource } from 'src/app/model/datasource/menus.datasource';
 import { Menus } from 'src/app/model/menus';
 import { AnyField, AnyPageFilter, SortFilter } from 'src/app/model/rest/filter';
 import { MenusService } from 'src/app/services/menus.service';
+import { ConfirmationDialogComponent } from 'src/app/shared/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-menushome',
@@ -118,6 +119,53 @@ selection = new SelectionModel<Menus>(true, []);
       : this.dataSource.menusSubject.value.forEach((row) =>
           this.selection.select(row)
         );
+  }
+ 
+
+  onDelete() {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '350px',
+      data: this.translate.instant('delete-element-confirmation'),
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.delete();
+        return new Observable((observer: Observer<boolean>) =>
+          observer.next(true)
+        );
+      } else {
+        return new Observable((observer: Observer<boolean>) =>
+          observer.next(false)
+        );
+      }
+    });
+  }
+
+  delete() {
+    const menus = this.selection.selected[0];
+    this.selection.deselect(menus);
+    if (this.selection.selected && this.selection.selected.length === 0) {
+      this.menusService.deleteMenus(menus.idMenu).subscribe((response) => {
+        console.log(response)
+        if (response.responseCode !== 'OK') {
+           this.error = true;
+         } else {
+          this.loadMenusPage();
+         }
+      });
+    } else {
+      this.menusService.deleteMenus(menus.idMenu).subscribe((response) => {
+        console.log(response);
+        if (response.responseCode !== 'OK') {
+           this.error = true;
+        }
+        this.delete();
+      });
+    }
+  }
+
+  onAdd() {
+    this.router.navigate(['/menus/add']);
   }
 
   onEdit(row: Menus) {

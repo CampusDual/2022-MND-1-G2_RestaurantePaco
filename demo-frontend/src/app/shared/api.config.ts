@@ -18,4 +18,8 @@ export const API_CONFIG = {
 
    // Menus API
    getMenus: environment.menusBaseUrl + '/getMenus',
+   getMenu: environment.menusBaseUrl + '/getMenu',
+   createMenus: environment.menusBaseUrl + '/createMenus',
+   editMenus: environment.menusBaseUrl + '/editMenus',
+  deleteMenus: environment.menusBaseUrl + '/deleteMenus',
 };
