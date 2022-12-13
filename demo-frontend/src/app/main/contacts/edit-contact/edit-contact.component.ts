@@ -70,6 +70,7 @@ export class EditContactComponent implements OnInit {
       });
     }
   }
+  
 
   redirectList(response: any) {
     if (response.responseCode === 'OK') {

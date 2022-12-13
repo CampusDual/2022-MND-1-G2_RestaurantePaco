@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Menus } from 'src/app/model/menus';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MenusService } from 'src/app/services/menus.service';
+import { LoggerService } from 'src/app/services/logger.service';
 
 @Component({
   selector: 'app-menusedit',
@@ -9,22 +11,30 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./menusedit.component.scss']
 })
 export class MenuseditComponent implements OnInit {
-  
   MenusForm: FormGroup;
   menus: Menus;
   idMenu: any;
   menuService: any;
   menu: any;
   menuForm: any;
-  logger: any;
-  fb: any;
+  // logger: any;
+  // fb: any;
+
+  // constructor(
+  //   private router: Router,
+  //   private route: ActivatedRoute,
+  // ) { }
 
   constructor(
+    private fb: FormBuilder,
+    private MenusService: MenusService,
     private router: Router,
     private route: ActivatedRoute,
-  ) { }
+    private logger: LoggerService
+  ) {
+    this.menu = new Menus();
+  }
 
- 
   onAdd() {
     this.router.navigate(['/menus/add']);
   }
@@ -40,6 +50,9 @@ export class MenuseditComponent implements OnInit {
         }
       );
     }
+  }
+  onFormChanges() {
+    this.menuForm.valueChanges.subscribe((val) => {});
   }
   createFormGroup() {
     this.menuForm = this.fb.group({

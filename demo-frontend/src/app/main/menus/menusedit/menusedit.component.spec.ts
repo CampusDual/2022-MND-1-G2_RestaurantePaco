@@ -11,7 +11,9 @@ describe('MenuseditComponent', () => {
       declarations: [ MenuseditComponent ]
     })
     .compileComponents();
-
+  });
+    
+  beforeEach (() => {
     fixture = TestBed.createComponent(MenuseditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,3 +23,4 @@ describe('MenuseditComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
