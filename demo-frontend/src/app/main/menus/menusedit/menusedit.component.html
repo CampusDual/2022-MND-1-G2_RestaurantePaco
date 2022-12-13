@@ -1,0 +1,54 @@
+<p>menusedit works!</p>
+<h1>Funciona</h1>
+
+
+<form [formGroup]="MenusForm" (ngSubmit)="save()" class="h-full">
+    <div fxLayout="column" fxLayoutGap="20px" class="form-content">
+      <div class="input-row">
+        <mat-card fxFlex>
+          <mat-card-header>
+            <mat-card-title>{{ 'form.menu' | translate }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            
+            <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+              <mat-form-field fxFlex>
+                <input matInput type="text" color="primary" placeholder="{{ 'table.menus.plato1' | translate }}"
+                  formControlName="plato1" name="menu-plato1" required />
+                  <mat-error>{{'plato1required'| translate}}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="input-row">
+              <mat-form-field fxFlex>
+                <input matInput type="text" color="primary" placeholder="{{ 'table.menus.plato2' | translate }}"
+                  formControlName="plato2" name="menu-plato2" required />
+                  <mat-error>
+                    {{'plato2required'| translate}}
+                  </mat-error>
+              </mat-form-field>
+              <mat-form-field fxFlex>
+                <input matInput type="text" color="primary" placeholder="{{ 'table.menu.postre' | translate }}"
+                  formControlName="postre" name="menu-postre" />
+              </mat-form-field>
+              <mat-form-field fxFlex>
+                <input matInput type="text" color="primary" placeholder="{{ 'table.menu.precio' | translate }}"
+                  formControlName="precio" name="menu-precio" />
+              </mat-form-field>
+            </div>
+           
+         
+            <mat-card-actions>
+            <div fclass="input-row" xLayoutGap="20px" fxLayoutAlign="center center">
+              <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="button" (click)="cancel()"
+                [formNoValidate]="true">{{ 'button.cancel' | translate }}</button>
+              <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="submit" color="primary"
+                [disabled]="!menuForm.valid">{{ 'button.save' | translate }}</button>
+            </div>
+            </mat-card-actions>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+  

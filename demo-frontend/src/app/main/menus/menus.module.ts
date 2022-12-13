@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TranslateModule } from '@ngx-translate/core';
 import { MenusLayoutComponent } from './menus-layout.component';
+import { MenuseditComponent } from './menusedit/menusedit.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { MenusLayoutComponent } from './menus-layout.component';
   ],
   declarations: [
      MenushomeComponent,
-     MenusLayoutComponent
+     MenusLayoutComponent,
+     MenuseditComponent
   ]
 })
 export class MenusModule { }

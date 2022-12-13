@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MenusLayoutComponent } from './menus-layout.component';
 import { MenushomeComponent } from './menushome/menushome.component';
+import { MenuseditComponent} from './menusedit/menusedit.component';
+
 
 const routes: Routes = [
   {
@@ -9,8 +11,8 @@ const routes: Routes = [
     component: MenusLayoutComponent,
     children: [
       { path: "", component: MenushomeComponent },
-      // { path: 'add', component: EditContactComponent },
-      // { path: 'edit/:id', component: EditContactComponent },
+      { path: 'add', component: MenuseditComponent },
+      { path: 'edit/:idMenu', component: MenuseditComponent },
     ],
   },
 ];
