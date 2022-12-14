@@ -42,13 +42,13 @@ export class MenuseditComponent implements OnInit {
     this.idMenu = this.route.snapshot.params['idMenu'];
     debugger;
     if (this.idMenu) {
-      // this.menuService.getMenus(this.idMenu).subscribe(
-      //   response => {
-      //     this.menu = response;
-      //     this.MenusForm.patchValue(this.menu, { emitEvent: false, onlySelf: false });
-      //     this.logger.info(this.menu);
-      //   }
-      // );
+       this.menuService.getMenu(this.idMenu).subscribe(
+         response => {
+           this.menu = response;
+           this.MenusForm.patchValue(this.menu, { emitEvent: false, onlySelf: false });
+           this.logger.info(this.menu);
+         }
+       );
     }
   }
   onFormChanges() {
