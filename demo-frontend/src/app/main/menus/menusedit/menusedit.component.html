@@ -12,7 +12,6 @@
               <mat-form-field fxFlex>
                 <input matInput type="text" color="primary" placeholder="{{ 'Primer plato' | translate }}"
                   formControlName="plato1" name="menu-plato1" required />
-                  <mat-error>{{'plato1required'| translate}}</mat-error>
               </mat-form-field>
             </div>
 
@@ -20,9 +19,6 @@
               <mat-form-field fxFlex>
                 <input matInput type="text" color="primary" placeholder="{{ 'Segundo plato' | translate }}"
                   formControlName="plato2" name="menu-plato2" required />
-                  <mat-error>
-                    {{'plato2required'| translate}}
-                  </mat-error>
               </mat-form-field>
               <mat-form-field fxFlex>
                 <input matInput type="text" color="primary" placeholder="{{ 'Postre' | translate }}"
@@ -40,7 +36,7 @@
               <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="button" (click)="cancel()"
                 [formNoValidate]="true">{{ 'button.cancel' | translate }}</button>
               <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="submit" color="primary"
-                [disabled]="!menuForm.valid">{{ 'button.save' | translate }}</button>
+                [disabled]="!MenusForm.valid">{{ 'button.save' | translate }}</button>
             </div>
             </mat-card-actions>
           </mat-card-content>

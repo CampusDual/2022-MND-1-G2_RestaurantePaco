@@ -12,11 +12,10 @@ import { LoggerService } from 'src/app/services/logger.service';
 })
 export class MenuseditComponent implements OnInit {
   MenusForm: FormGroup;
-  menus: Menus;
-  idMenu: any;
-  menuService: any;
-  menu: any;
-  menuForm: any;
+  menu: Menus;
+  idMenu: number;
+  // menuService: any;
+  // menu: any;
   // logger: any;
   // fb: any;
 
@@ -27,7 +26,7 @@ export class MenuseditComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private MenusService: MenusService,
+    private menuService: MenusService,
     private router: Router,
     private route: ActivatedRoute,
     private logger: LoggerService
@@ -41,37 +40,38 @@ export class MenuseditComponent implements OnInit {
   ngOnInit() {
     this.createFormGroup();
     this.idMenu = this.route.snapshot.params['idMenu'];
+    debugger;
     if (this.idMenu) {
-      this.menuService.getMenu(this.idMenu).subscribe(
-        response => {
-          this.menu = response;
-          this.menuForm.patchValue(this.menu, { emitEvent: false, onlySelf: false });
-          this.logger.info(this.menu);
-        }
-      );
+      // this.menuService.getMenus(this.idMenu).subscribe(
+      //   response => {
+      //     this.menu = response;
+      //     this.MenusForm.patchValue(this.menu, { emitEvent: false, onlySelf: false });
+      //     this.logger.info(this.menu);
+      //   }
+      // );
     }
   }
   onFormChanges() {
-    this.menuForm.valueChanges.subscribe((val) => {});
+    this.MenusForm.valueChanges.subscribe((val) => {});
   }
   createFormGroup() {
-    this.menuForm = this.fb.group({
+    this.MenusForm = this.fb.group({
       id: [this.menu.idMenu],
-      plato1: [this.menu.plato1, Validators.required],
+      plato1: [this.menu.plato1],
       plato2: [this.menu.plato2],
       postre: [this.menu.postre],
-      precio: [this.menu.precio, [Validators.required, Validators.pattern("^[0-9]{9}$")]],
+      precio: [this.menu.precio],
       
     });
   }
   save() {
     const newMenu: Menus = Object.assign({}, this.MenusForm.value);
     if (newMenu.idMenu) {
-      this.menuService.editMenu(newMenu).subscribe((response) =>{
+      this.menuService.editMenus(newMenu).subscribe((response) =>{
         this.redirectList(response);
       });
     } else {
-      this.menuService.createMenu(newMenu).subscribe((response) => {
+      this.menuService.createMenus(newMenu).subscribe((response) => {
         this.redirectList(response);
       });
     }
