@@ -25,6 +25,16 @@ export class MenusService {
     });
     return this.http.post<DataSourceRESTResponse<Menus[]>>(url, pageFilter, { headers });
   }
+  public getMenu(idMenu: number): Observable<Menus> {
+    const url = API_CONFIG.getMenu;
+    const headers = new HttpHeaders({
+      'Content-type': 'charset=utf-8',
+      Authorization: 'Basic ' + Buffer.from(`${environment.clientName}:${environment.clientSecret}`, 'utf8').toString('base64'),
+    });
+    const params = new HttpParams().set('idMenu', idMenu.toString());
+    return this.http.get<Menus>(url, { params, headers });
+  }
+
 
 
   public createMenus(menus: Menus): Observable<any> {
