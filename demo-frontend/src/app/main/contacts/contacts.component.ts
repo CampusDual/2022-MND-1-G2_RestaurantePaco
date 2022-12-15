@@ -18,6 +18,8 @@ import { ContactService } from '../../services/contact.service';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from 'src/app/shared/confirmation-dialog/confirmation-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import {FormControl, Validators} from '@angular/forms';
+import { Menus } from 'src/app/model/menus';
 
 @Component({
   // selector: 'app-contacts',
@@ -29,13 +31,11 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   dataSource: ContactDataSource;
   displayedColumns = [
     'select',
-    'name',
-    'surname1',
-    'surname2',
-    'phone',
-    'email',
+    'mesa',
+    'menu',
+    'numeromenu',
   ];
-  fields = ['name', 'surname1', 'surname2', 'phone', 'email'];
+  fields = ['mesa', 'menu', 'numeromenu'];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;
@@ -61,7 +61,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
       this.fields.map((field) => new AnyField(field)),
       0,
       20,
-      'name'
+      'Mesa'
     );
     this.dataSource.getContacts(pageFilter);
   }
@@ -167,10 +167,34 @@ export class ContactsComponent implements OnInit, AfterViewInit {
 
   onAdd() {
     this.router.navigate(['/contacts/add']);
+    //  MIRAR RUTA
   }
 
   onEdit(row: Contact) {
     this.highlightedRow = row;
     this.router.navigate(['/contacts/edit/' + row.id]);
   }
+
 }
+
+
+  interface Food {
+    value: string;
+    viewValue: string;
+  }
+
+  // @Component({
+  //   selector: 'select-form-example',
+  //   templateUrl: 'select-form-example.html',
+  // })
+  // export class SelectFormExample {
+  //   selectedValue: string;
+  //   selectedCar: string;
+    
+  // foods: Food[] = [
+  //   {value: 'steak-0', viewValue: 'Steak'},
+  //   {value: 'pizza-1', viewValue: 'Pizza'},
+  //   {value: 'tacos-2', viewValue: 'Tacos'},
+  // ];
+
+

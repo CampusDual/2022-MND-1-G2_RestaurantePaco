@@ -68,12 +68,12 @@
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="name">
+      <ng-container matColumnDef="mesa">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.name" | translate }}
+          {{ "mesa" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{ row.name }}
+        <mat-cell *matCellDef="let row" data-label="mesa">
+          {{ row.mesa }}
         </mat-cell>
       </ng-container>
 
@@ -86,32 +86,28 @@
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="surname2">
+
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(ngModel)]= "selectedValue" name="food">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+      
+
+
+      <ng-container matColumnDef="numeromenus">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.surname2" | translate }}
+          {{ "numeromenus" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="surname2">
-          {{ row.surname2 }}
+        <mat-cell *matCellDef="let row" data-label="Nº de menús">
+          {{ row.numeromenus }}
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="phone">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.phone" | translate }}
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="phone">
-          {{ row.phone }}
-        </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="email">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.email" | translate }}
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="email">
-          {{ row.email }}
-        </mat-cell>
-      </ng-container>
+      
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row

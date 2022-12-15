@@ -91,4 +91,9 @@ export class EditContactComponent implements OnInit {
   cancel() {
     this.router.navigate(['/contacts']);
   }
+  
+  
+  onAdd() {
+    this.router.navigate(['/contacts/add']);
+  }
 }

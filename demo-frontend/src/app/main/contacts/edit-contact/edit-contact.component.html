@@ -5,48 +5,28 @@
         <mat-card-header>
           <mat-card-title>{{ 'form.contact' | translate }}</mat-card-title>
         </mat-card-header>
+
         <mat-card-content>
           <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.name' | translate }}"
-                formControlName="name" name="contact-name" required />
-                <mat-error>{{'namerequired'| translate}}</mat-error>
+              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}"
+                formControlName="Mesa" name="contact-Mesa" required />
             </mat-form-field>
           </div>
+          
           <div class="input-row">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.surname1' | translate }}"
-                formControlName="surname1" name="contact-surname1" required />
-                <mat-error>
-                  {{'surname1required'| translate}}
-                </mat-error>
+              <input matInput type="text" color="primary" placeholder="{{ 'Menu' | translate }}"
+                formControlName="Menu" name="contact-Menu" required />
             </mat-form-field>
+
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.surname2' | translate }}"
-                formControlName="surname2" name="contact-surname2" />
+              <input matInput type="text" color="primary" placeholder="{{ 'Nº de Menús' | translate }}"
+                formControlName="NMenus" name="contact-NMenus" />
             </mat-form-field>
           </div>
-          <div class="input-row">
-            <mat-form-field fxFlex>
-              <input matInput type="tel" color="primary" placeholder="{{ 'table.contacts.phone' | translate }}"
-                formControlName="phone" name="contact-phone" required />
-                <mat-icon matSuffix>phone</mat-icon>
-                <mat-error *ngIf="contactForm.get('phone').hasError('required')">
-                  {{'phonerequired'| translate}}
-                </mat-error>
-                <mat-error *ngIf="contactForm.get('phone').hasError('pattern')">
-                  {{'phonepattern'| translate}}
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field fxFlex>
-              <input matInput type="email" color="primary" placeholder="{{ 'table.contacts.email' | translate }}"
-                formControlName="email" name="contact-email" email />
-                <mat-icon matSuffix>mail</mat-icon>
-                <mat-error>
-                  {{'emailpattern'| translate}}
-                </mat-error>
-            </mat-form-field>
-          </div>
+          
+          
         </mat-card-content>
         <mat-card-actions>
           <div fclass="input-row" xLayoutGap="20px" fxLayoutAlign="center center">
@@ -54,6 +34,9 @@
               [formNoValidate]="true">{{ 'button.cancel' | translate }}</button>
             <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="submit" color="primary"
               [disabled]="!contactForm.valid">{{ 'button.save' | translate }}</button>
+              <button mat-raised-button (click)="onAdd()">
+                <mat-icon>add</mat-icon> {{ "new" | translate }}
+              </button>
           </div>
         </mat-card-actions>
       </mat-card>

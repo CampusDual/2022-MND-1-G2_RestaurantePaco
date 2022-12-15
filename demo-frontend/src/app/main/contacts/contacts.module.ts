@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactsComponent } from './contacts.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -17,6 +15,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TranslateModule } from '@ngx-translate/core';
 import { ContactsLayoutComponent } from './contacts-layout.component';
+import {MatNativeDateModule} from '@angular/material/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+
+
 
 @NgModule({
     imports: [
@@ -34,11 +37,15 @@ import { ContactsLayoutComponent } from './contacts-layout.component';
         MatCardModule,
         MatCheckboxModule,
         TranslateModule,
+        FormsModule,
+        MatNativeDateModule,
     ],
     declarations: [
         ContactsComponent,
         EditContactComponent,
-        ContactsLayoutComponent
+        ContactsLayoutComponent,
+        
     ]
+      
 })
 export class ContactsModule { }
