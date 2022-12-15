@@ -1,8 +1,8 @@
 package com.example.demo.service;
 
 import com.borjaglez.springify.repository.filter.IPageFilter;
-import com.example.demo.dto.ContactDTO;
-import com.example.demo.entity.Contact;
+import com.example.demo.dto.ComandaDTO;
+import com.example.demo.entity.Comanda;
 import com.example.demo.entity.Menus;
 import com.example.demo.exception.DemoException;
 import com.example.demo.rest.model.QuerySortPaginationRequest;
@@ -27,18 +27,17 @@ public class AbstractDemoService {
 		}
 	}
 	
-	public Contact fromEditContactRequest(Contact contactRequest) {
-		return new Contact(contactRequest.getId(), contactRequest.getName(), contactRequest.getSurname1(),
-				contactRequest.getSurname2(), contactRequest.getPhone(), contactRequest.getEmail());
+	public Comanda fromEditComandaRequest(Comanda comandaRequest) {
+		return new Comanda(comandaRequest.getId(), comandaRequest.getMesa(), comandaRequest.getMenus(),
+				comandaRequest.getNumeromenus());
 	}
 	public Menus fromEditMenusRequest(Menus menusRequest) {
 		return new Menus(menusRequest.getIdMenu(),menusRequest.getPlato1(), menusRequest.getPlato2(), menusRequest.getPostre(),
 				menusRequest.getPrecio());
 	}
 
-	public Contact fromCreateContactRequest(ContactDTO contactRequest) {
-		return  new Contact(contactRequest.getName(), contactRequest.getSurname1(), contactRequest.getSurname2(),
-				contactRequest.getPhone(), contactRequest.getEmail());
+	public Comanda fromCreateComandaRequest(ComandaDTO comandaRequest) {
+		return  new Comanda(comandaRequest.getMesa(), comandaRequest.getMenus(), comandaRequest.getNumeromenus());
 	}
 
 }

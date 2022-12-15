@@ -7,14 +7,14 @@ public class Constant {
 	//Contact error
 	public static final String NAME_REQUIRED ="NAME_REQUIRED";
 	public static final String ID_REQUIRED ="ID_REQUIRED";
-	public static final String SURNAME1_REQUIRED ="SURNAME1_REQUIRED";
-	public static final String SURNAME2_REQUIRED ="SURNAME2_REQUIRED";
-	public static final String PHONE_REQUIRED ="PHONE_REQUIRED";
+	public static final String MESA_REQUIRED ="MESA_REQUIRED";
+	public static final String NUMEROMENU_REQUIRED ="NUMEROMENU_REQUIRED";
+	public static final String CANTIDADDEMENUS_REQUIRED ="CANTIDADDE_REQUIRED";
 	public static final String PHONE_INVALID ="PHONE_INVALID";
 	public static final String PHONE_ALREADY_EXISTS ="PHONE_ALREADY_EXISTS";
 	public static final String EMAIL_REQUIRED ="EMAIL_REQUIRED";
 	public static final String EMAIL_INVALID ="EMAIL_INVALID";
-	public static final String CONTACT_NOT_EXISTS ="CONTACT_NOT_EXISTS";
+	public static final String COMANDA_NOT_EXISTS ="COMANDA_NOT_EXISTS";
 	public static final String CONTACT_ALREADY_EXISTS ="CONTACT_ALREADY_EXISTS";
 	public static final String CONTACT_CONSTRAINT_VIOLATION ="CONTACT_CONSTRAINT_VIOLATION";
 	public static final String UNKNOWN_ERROR ="UNKNOWN_ERROR";
@@ -33,12 +33,12 @@ public class Constant {
 	public static final String MENU_NOT_CREATED ="MENU_NOT_CREATED";
 	
 	//Contact message
-	public static final String CONTACT_CREATE_SUCCESS ="CONTACT_CREATE_SUCCESS";
-	public static final String CONTACT_NOT_CREATED ="CONTACT_NOT_CREATED";
-	public static final String CONTACT_EDIT_SUCCESS ="CONTACT_EDIT_SUCCESS";
-	public static final String CONTACT_NOT_EDIT ="CONTACT_NOT_EDIT";
-	public static final String CONTACT_DELETE_SUCCESS ="CONTACT_DELETE_SUCCESS";
-	public static final String CONTACT_NOT_DELETE ="CONTACT_NOT_DELETE";
+	public static final String COMANDA_CREATE_SUCCESS ="COMANDA_CREATE_SUCCESS";
+	public static final String COMANDA_NOT_CREATED ="COMANDA_NOT_CREATED";
+	public static final String COMANDA_EDIT_SUCCESS ="COMANDA_EDIT_SUCCESS";
+	public static final String COMANDA_NOT_EDIT ="COMANDA_NOT_EDIT";
+	public static final String COMANDA_DELETE_SUCCESS ="COMANDA_DELETE_SUCCESS";
+	public static final String COMANDA_NOT_DELETE ="COMANDA_NOT_DELETE";
 	
 	//User message
 	public static final String USER_CREATE_SUCCESS ="USER_CREATE_SUCCESS";

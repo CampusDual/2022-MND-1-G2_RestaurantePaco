@@ -3,11 +3,11 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.borjaglez.springify.repository.filter.impl.AnyPageFilter;
-import com.example.demo.dto.ContactDTO;
-import com.example.demo.entity.Contact;
+import com.example.demo.dto.ComandaDTO;
+import com.example.demo.entity.Comanda;
 import com.example.demo.rest.response.DataSourceRESTResponse;
 
-public interface IContactService {
+public interface IComandaService {
 
 	/**
 	 * Obtiene un usuario de BDD con el id indicado.
@@ -15,7 +15,7 @@ public interface IContactService {
 	 * @param id el id del usuario de la BDD.
 	 * @return el usuario cuyo id sea el pasado por parámetros.
 	 */
-	ContactDTO getContact(Integer id);
+	ComandaDTO getComanda(Integer id);
 
 	/**
 	 * Devuelve los usuarios que alguno de sus campos contenga la 'query'
@@ -26,7 +26,7 @@ public interface IContactService {
 	 *         independientemente de las mayúsculas.
 	 * @since 0.0.5
 	 */
-	DataSourceRESTResponse<List<ContactDTO>> getContacts(AnyPageFilter pageFilter);
+	DataSourceRESTResponse<List<ComandaDTO>> getComandas(AnyPageFilter pageFilter);
 
 	/**
 	 * Crea un nuevo usuario en la BDD.
@@ -34,7 +34,7 @@ public interface IContactService {
 	 * @return el id del usuario creado.
 	 * @since 0.0.5
 	 */
-	ContactDTO createContact(ContactDTO createContactRequest);
+	ComandaDTO createComanda(ComandaDTO createComandaRequest);
 
 
 	/**
@@ -43,7 +43,7 @@ public interface IContactService {
 	 * @return el id del usuario eliminado.
 	 * @since 0.0.5
 	 */
-	Integer deleteContact(Integer id);
+	Integer deleteComanda(Integer id);
 	
 	/**
 	 * Devuelve todos los contactos que se encuentran en la tabla
@@ -52,7 +52,7 @@ public interface IContactService {
 	 *         independientemente de las mayúsculas.
 	 * @since 0.0.5
 	 */
-	List<ContactDTO> findAll();
+	List<ComandaDTO> findAll();
 	
 	/**
 	 * Modifica un usuario en la BDD.
@@ -60,6 +60,6 @@ public interface IContactService {
 	 * @return el id del usuario modificado.
 	 * @since 0.0.5
 	 */
-	Integer editContact(ContactDTO editContactRequest);
+	Integer editComanda(ComandaDTO editComandaRequest);
 	
 }
