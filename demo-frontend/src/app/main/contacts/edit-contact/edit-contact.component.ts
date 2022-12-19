@@ -90,7 +90,7 @@ export class EditContactComponent implements OnInit {
   }
   
   
-  onAdd() {
-    this.router.navigate(['/contacts/add']);
+  onAddMenu() {
+    //this.router.navigate(['/contacts/add']);
   }
 }

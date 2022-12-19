@@ -40,7 +40,7 @@
       mat-table
       [dataSource]="dataSource"
       matSort
-      matSortActive="name"
+      matSortActive="mesa"
       matSortDirection="asc"
       matSortDisableClear
       class="w-full"
@@ -70,19 +70,19 @@
 
       <ng-container matColumnDef="mesa">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "mesa" | translate }}
+          {{ "Mesa" | translate }}
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="mesa">
           {{ row.mesa }}
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="surname1">
+      <ng-container matColumnDef="menu">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.surname1" | translate }}
+          {{ "Menu" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="surname1">
-          {{ row.surname1 }}
+        <mat-cell *matCellDef="let row" data-label="menu">
+          {{ row.menu }}
         </mat-cell>
       </ng-container>
 

@@ -9,31 +9,32 @@
         <mat-card-content>
           <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}"
-                formControlName="Mesa" name="contact-Mesa" required />
+              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}" formControlName="mesa"
+                name="contact-mesa" required />
             </mat-form-field>
           </div>
-          
+
           <div class="input-row">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'Menu' | translate }}"
-                formControlName="Menu" name="contact-Menu" required />
+              <input matInput type="text" color="primary" placeholder="{{ 'Menu' | translate }}" 
+              formControlName="menus"
+                name="contact-menu" required />
             </mat-form-field>
           </div>
-          
-          
-        <mat-card-actions>
-          <div fclass="input-row" xLayoutGap="20px" fxLayoutAlign="center center">
-            <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="button" (click)="cancel()"
-              [formNoValidate]="true">{{ 'button.cancel' | translate }}</button>
-            <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="submit" color="primary"
-              [disabled]="!contactForm.valid">{{ 'button.save' | translate }}</button>
-              <button mat-raised-button (click)="onAdd()">
+
+
+          <mat-card-actions>
+            <div fclass="input-row" xLayoutGap="20px" fxLayoutAlign="center center">
+              <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="button" (click)="cancel()"
+                [formNoValidate]="true">{{ 'button.cancel' | translate }}</button>
+              <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="submit" color="primary"
+                [disabled]="!contactForm.valid">{{ 'button.save' | translate }}</button>
+              <button mat-raised-button (click)="onAddMenu()">
                 <mat-icon>add</mat-icon> {{ "new" | translate }}
               </button>
-          </div>
-        </mat-card-actions>
-      </mat-card-content>
+            </div>
+          </mat-card-actions>
+        </mat-card-content>
       </mat-card>
     </div>
   </div>
