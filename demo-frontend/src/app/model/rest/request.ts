@@ -18,30 +18,26 @@ export class QuerySortPaginationRequest {
 }
 export class CreateContactRequest {
 
-  name: string;
+  // name: string;
+  // surname1: string;
+  // surname2: string;
+  // phone: number;
+  // email: string;
 
-  surname1: string;
-
-  surname2: string;
-
-  phone: number;
-
-  email: string;
+  mesa: number;
+  menus: string;
 
 
 
   constructor(contact: Contact) {
-
-    this.name = contact.name;
-
-    this.surname1 = contact.surname1;
-
-    this.surname2 = contact.surname2;
-
-    this.phone = contact.phone;
-
-    this.email = contact.email;
-
+    // this.name = contact.name;
+    // this.surname1 = contact.surname1;
+    // this.surname2 = contact.surname2;
+    // this.phone = contact.phone;
+    // this.email = contact.email;
+    
+    this.mesa = contact.mesa;
+    this.menus=contact.menus;
   }
 
 }

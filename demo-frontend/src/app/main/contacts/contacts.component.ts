@@ -33,9 +33,8 @@ export class ContactsComponent implements OnInit, AfterViewInit {
     'select',
     'mesa',
     'menu',
-    'numeromenu',
   ];
-  fields = ['mesa', 'menu', 'numeromenu'];
+  fields = ['mesa', 'menu', ];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;

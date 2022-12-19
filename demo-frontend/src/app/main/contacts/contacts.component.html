@@ -95,19 +95,6 @@
           </mat-option>
         </mat-select>
       </mat-form-field> -->
-      
-
-
-      <ng-container matColumnDef="numeromenus">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "numeromenus" | translate }}
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="Nº de menús">
-          {{ row.numeromenus }}
-        </mat-cell>
-      </ng-container>
-
-      
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row

@@ -6,7 +6,7 @@ import { MenusService } from 'src/app/services/menus.service';
 import { LoggerService } from 'src/app/services/logger.service';
 
 @Component({
-  selector: 'app-menusedit',
+  //selector: 'app-menusedit',
   templateUrl: './menusedit.component.html',
   styleUrls: ['./menusedit.component.scss']
 })
@@ -16,15 +16,6 @@ export class MenuseditComponent implements OnInit {
   MenusForm: FormGroup;
   menu: Menus;
   errores:string[];
-  // menuService: any;
-  // menu: any;
-  // logger: any;
-  // fb: any;
-
-  // constructor(
-  //   private router: Router,
-  //   private route: ActivatedRoute,
-  // ) { }
 
   constructor(
     private fb: FormBuilder,

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Contact } from 'src/app/model/contact';
 import { ContactService } from 'src/app/services/contact.service';
-
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { LoggerService } from 'src/app/services/logger.service';
 
@@ -50,11 +49,9 @@ export class EditContactComponent implements OnInit {
   createFormGroup() {
     this.contactForm = this.fb.group({
       id: [this.contact.id],
-      name: [this.contact.name, Validators.required],
-      surname1: [this.contact.surname1],
-      surname2: [this.contact.surname2],
-      phone: [this.contact.phone, [Validators.required, Validators.pattern("^[0-9]{9}$")]],
-      email: [this.contact.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")],
+      mesa: [this.contact.mesa],
+      menus: [this.contact.menus],
+      
     });
   }
 

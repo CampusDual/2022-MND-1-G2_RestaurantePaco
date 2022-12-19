@@ -3,7 +3,7 @@
     <div class="input-row">
       <mat-card fxFlex>
         <mat-card-header>
-          <mat-card-title>{{ 'form.contact' | translate }}</mat-card-title>
+          <mat-card-title>{{ 'COMANDA' | translate }}</mat-card-title>
         </mat-card-header>
 
         <mat-card-content>
@@ -19,15 +19,9 @@
               <input matInput type="text" color="primary" placeholder="{{ 'Menu' | translate }}"
                 formControlName="Menu" name="contact-Menu" required />
             </mat-form-field>
-
-            <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'Nº de Menús' | translate }}"
-                formControlName="NMenus" name="contact-NMenus" />
-            </mat-form-field>
           </div>
           
           
-        </mat-card-content>
         <mat-card-actions>
           <div fclass="input-row" xLayoutGap="20px" fxLayoutAlign="center center">
             <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="button" (click)="cancel()"
@@ -39,6 +33,7 @@
               </button>
           </div>
         </mat-card-actions>
+      </mat-card-content>
       </mat-card>
     </div>
   </div>
