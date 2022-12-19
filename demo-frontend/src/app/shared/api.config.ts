@@ -10,11 +10,11 @@ export const API_CONFIG = {
 
 
   // Contacts API
-  getContacts: environment.contactsBaseUrl + '/getContacts',
-  getContact: environment.contactsBaseUrl + '/getContact',
-  createContact: environment.contactsBaseUrl + '/createContact',
-  editContact: environment.contactsBaseUrl + '/editContact',
-  deleteContact: environment.contactsBaseUrl + '/deleteContact',
+  getContacts: environment.contactsBaseUrl + '/getComandas',
+  getContact: environment.contactsBaseUrl + '/getComanda',
+  createContact: environment.contactsBaseUrl + '/createComanda',
+  editContact: environment.contactsBaseUrl + '/editComanda',
+  deleteContact: environment.contactsBaseUrl + '/deleteComanda',
 
    // Menus API
    getMenus: environment.menusBaseUrl + '/getMenus',

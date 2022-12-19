@@ -39,7 +39,7 @@ import com.example.demo.utils.Constant;
 @RestController
 @RequestMapping(ComandasController.REQUEST_MAPPING)
 public class ComandasController {
-	public static final String REQUEST_MAPPING = "comandas";
+	public static final String REQUEST_MAPPING = "contacts";  //SE CAMBIO "comandas" POR "contacts"
 	private static final Logger LOGGER = LoggerFactory.getLogger(ComandasController.class);
 
 	@Autowired
@@ -52,7 +52,7 @@ public class ComandasController {
 	 * @return el contacto cuyo id sea el pasado por parámetros.
 	 */
 	@GetMapping("/getComanda")
-	@PreAuthorize("hasAnyAuthority('COMANDAS')")
+	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public ResponseEntity<?> getComanda(@RequestParam(value = "id") Integer id) {
 		LOGGER.info("getComanda in progress...");
 		ComandaDTO comanda = null;
@@ -91,7 +91,7 @@ public class ComandasController {
 	@PostMapping(path = "/getComandas", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public @ResponseBody DataSourceRESTResponse<List<ComandaDTO>> getComandas(@RequestBody AnyPageFilter pageFilter) {
-		LOGGER.info("getContacts in progress...");
+		LOGGER.info("getComandas in progress...");
 		DataSourceRESTResponse<List<ComandaDTO>> dres = new DataSourceRESTResponse<>();
 		try {
 			dres = comandaService.getComandas(pageFilter);
@@ -111,7 +111,7 @@ public class ComandasController {
 	 * @since 0.0.5
 	 */
 	@GetMapping(path = "/getComandas")
-	@PreAuthorize("hasAnyAuthority('COMANDAS')")
+	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public @ResponseBody List<ComandaDTO> findAll() {
 		LOGGER.info("findAll in progress...");
 		return comandaService.findAll();
@@ -124,7 +124,7 @@ public class ComandasController {
 	 * @since 0.0.5
 	 */
 	@PostMapping(path = "/createComanda")
-	@PreAuthorize("hasAnyAuthority('COMANDAS')")
+	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public ResponseEntity<?> createComanda(@Valid @RequestBody ComandaDTO createComandaRequest, BindingResult result) {
 		LOGGER.info("createComanda in progress...");
 		ComandaDTO comandaNew = null;
@@ -174,7 +174,7 @@ public class ComandasController {
 	 * @since 0.0.5
 	 */
 	@PostMapping(path = "/editComanda", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	@PreAuthorize("hasAnyAuthority('COMANDAS')")
+	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public ResponseEntity<Map<String, Object>> editComanda(@Valid @RequestBody ComandaDTO editComandaRequest, BindingResult result) {
 		LOGGER.info("editContact in progress...");
 		int id = 0;
@@ -231,7 +231,7 @@ public class ComandasController {
 	 * @since 0.0.5
 	 */
 	@DeleteMapping("/deleteComanda")
-	@PreAuthorize("hasAnyAuthority('COMANDAS')")
+	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public ResponseEntity<?> deleteComanda(@RequestParam(value = "id") Integer id) {
 		LOGGER.info("deleteContact in progress...");
 		Map<String, Object> response = new HashMap<>();

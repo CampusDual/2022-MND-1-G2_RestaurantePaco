@@ -25,7 +25,7 @@ export class CreateContactRequest {
   // email: string;
 
   mesa: number;
-  menus: string;
+  menus: number;
 
 
 

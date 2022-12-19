@@ -50,7 +50,7 @@ export class EditContactComponent implements OnInit {
     this.contactForm = this.fb.group({
       id: [this.contact.id],
       mesa: [this.contact.mesa],
-      menus: [this.contact.menus],
+      menu: [this.contact.menus],
       
     });
   }

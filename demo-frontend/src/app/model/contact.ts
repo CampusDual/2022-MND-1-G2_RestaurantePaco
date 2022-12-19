@@ -7,6 +7,6 @@ export class Contact {
   // email: string;
   id: number;
   mesa: number;
-  menus: string;
+  menus: number;
   
 }

@@ -9,14 +9,15 @@
         <mat-card-content>
           <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}" formControlName="mesa"
+              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}" 
+              formControlName="mesa"
                 name="contact-mesa" required />
             </mat-form-field>
           </div>
 
           <div class="input-row">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'Menu' | translate }}" 
+              <input matInput type="number" color="primary" placeholder="{{ 'Menu' | translate }}" 
               formControlName="menus"
                 name="contact-menu" required />
             </mat-form-field>
