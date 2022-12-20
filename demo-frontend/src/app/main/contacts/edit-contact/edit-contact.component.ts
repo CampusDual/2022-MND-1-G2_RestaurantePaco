@@ -61,11 +61,11 @@ export class EditContactComponent implements OnInit {
     const newContact: Contact = Object.assign({}, this.contactForm.value);
     if (newContact.id) {
       this.contactService.editContact(newContact).subscribe((response) =>{
-        this.redirectList('/contacts/add');
+        this.redirectList(response);
       });
     } else {
       this.contactService.createContact(newContact).subscribe((response) => {
-        this.redirectList('/contacts/add');
+        this.redirectList(response);
       });
     }
   }
