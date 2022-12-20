@@ -32,9 +32,9 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   displayedColumns = [
     'select',
     'mesa',
-    'menu',
+    'menus',
   ];
-  fields = ['mesa', 'menu', ];
+  fields = ['mesa', 'menus', ];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;
@@ -177,10 +177,10 @@ export class ContactsComponent implements OnInit, AfterViewInit {
 }
 
 
-  interface Food {
-    value: string;
-    viewValue: string;
-  }
+  // interface Food {
+  //   value: string;
+  //   viewValue: string;
+  // }
 
   // @Component({
   //   selector: 'select-form-example',

@@ -6,6 +6,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { LoggerService } from 'src/app/services/logger.service';
 
 @Component({
+  selector: 'app-edit-contact',
   templateUrl: './edit-contact.component.html',
   styleUrls: ['./edit-contact.component.scss'],
 })
@@ -50,7 +51,8 @@ export class EditContactComponent implements OnInit {
     this.contactForm = this.fb.group({
       id: [this.contact.id],
       mesa: [this.contact.mesa],
-      menu: [this.contact.menus],
+      menus: [this.contact.menus],
+      // food: this.foods,
       
     });
   }
@@ -59,11 +61,11 @@ export class EditContactComponent implements OnInit {
     const newContact: Contact = Object.assign({}, this.contactForm.value);
     if (newContact.id) {
       this.contactService.editContact(newContact).subscribe((response) =>{
-        this.redirectList(response);
+        this.redirectList('/contacts/add');
       });
     } else {
       this.contactService.createContact(newContact).subscribe((response) => {
-        this.redirectList(response);
+        this.redirectList('/contacts/add');
       });
     }
   }
@@ -71,7 +73,7 @@ export class EditContactComponent implements OnInit {
 
   redirectList(response: any) {
     if (response.responseCode === 'OK') {
-      this.router.navigate(['/contacts']);
+      this.router.navigate(['/contacts/add']);
     }else{
       console.log(response);
     }
@@ -88,9 +90,21 @@ export class EditContactComponent implements OnInit {
   cancel() {
     this.router.navigate(['/contacts']);
   }
+  selectedValue: string;
   
+// foods: Food[] = [
+//   {value: 'steak-0', viewValue: 'Steak'},
+//   {value: 'pizza-1', viewValue: 'Pizza'},
+//   {value: 'tacos-2', viewValue: 'Tacos'},
+// ];
+
   
   onAddMenu() {
     //this.router.navigate(['/contacts/add']);
   }
+ 
 }
+//  interface Food {
+//     value: string;
+//     viewValue: string;
+//   }

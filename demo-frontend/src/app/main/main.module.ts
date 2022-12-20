@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule, DatePipe } from '@angular/common';
 
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule, DatePipe } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -78,6 +78,7 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     NgxChartsModule,
     BrowserAnimationsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' }, DatePipe],
 })

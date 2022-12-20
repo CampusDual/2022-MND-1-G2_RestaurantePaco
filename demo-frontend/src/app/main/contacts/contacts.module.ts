@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactsComponent } from './contacts.component';
@@ -45,7 +45,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         EditContactComponent,
         ContactsLayoutComponent,
         
-    ]
+    ],
+    
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
       
 })
 export class ContactsModule { }

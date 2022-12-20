@@ -9,19 +9,25 @@
         <mat-card-content>
           <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}" 
-              formControlName="mesa"
+              <input matInput type="text" color="primary" placeholder="{{ 'Mesa' | translate }}" formControlName="mesa"
                 name="contact-mesa" required />
             </mat-form-field>
           </div>
 
           <div class="input-row">
             <mat-form-field fxFlex>
-              <input matInput type="number" color="primary" placeholder="{{ 'Menu' | translate }}" 
-              formControlName="menu"
-                name="contact-menu" required />
+              <input matInput type="number" color="primary" placeholder="{{ 'Menu' | translate }}"
+                formControlName="menus" name="contact-menu" required />
             </mat-form-field>
           </div>
+          <!-- <mat-form-field >
+            <mat-label>Favorite food</mat-label>
+            <mat-select [(ngModel)]="selectedValue" formControlName="food" name="food" >
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field> -->
 
 
           <mat-card-actions>
@@ -40,3 +46,11 @@
     </div>
   </div>
 </form>
+<!--<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>-->

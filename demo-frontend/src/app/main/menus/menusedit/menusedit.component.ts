@@ -10,12 +10,15 @@ import { LoggerService } from 'src/app/services/logger.service';
   templateUrl: './menusedit.component.html',
   styleUrls: ['./menusedit.component.scss']
 })
+
 export class MenuseditComponent implements OnInit {
   idMenu:number;
 
   MenusForm: FormGroup;
   menu: Menus;
   errores:string[];
+  
+
 
   constructor(
     private fb: FormBuilder,
@@ -26,6 +29,8 @@ export class MenuseditComponent implements OnInit {
   ) {
     this.menu = new Menus();
   }
+  
+
 
   onAdd() {
     this.router.navigate(['/menus/add']);
