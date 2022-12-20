@@ -16,8 +16,6 @@ public class ComandaDTO {
 	@NotEmpty(message = Constant.NUMEROMENU_REQUIRED)
 	private Integer menus;
 	
-	@NotNull(message = Constant.CANTIDADDEMENUS_REQUIRED)
-	private Integer numeromenus;
 
 	public Integer getId() {
 		return id;
@@ -43,13 +41,7 @@ public class ComandaDTO {
 		this.menus = menus;
 	}
 
-	public Integer getNumeromenus() {
-		return numeromenus;
-	}
 
-	public void setNumeromenus(Integer numeromenus) {
-		this.numeromenus = numeromenus;
-	}
 	
 //comentario
 

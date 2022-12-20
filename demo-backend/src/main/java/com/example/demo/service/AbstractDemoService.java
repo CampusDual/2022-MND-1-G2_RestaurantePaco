@@ -28,8 +28,7 @@ public class AbstractDemoService {
 	}
 	
 	public Comanda fromEditComandaRequest(Comanda comandaRequest) {
-		return new Comanda(comandaRequest.getId(), comandaRequest.getMesa(), comandaRequest.getMenus(),
-				comandaRequest.getNumeromenus());
+		return new Comanda(comandaRequest.getId(), comandaRequest.getMesa(), comandaRequest.getMenus());
 	}
 	public Menus fromEditMenusRequest(Menus menusRequest) {
 		return new Menus(menusRequest.getIdMenu(),menusRequest.getPlato1(), menusRequest.getPlato2(), menusRequest.getPostre(),
@@ -37,7 +36,7 @@ public class AbstractDemoService {
 	}
 
 	public Comanda fromCreateComandaRequest(ComandaDTO comandaRequest) {
-		return  new Comanda(comandaRequest.getMesa(), comandaRequest.getMenus(), comandaRequest.getNumeromenus());
+		return  new Comanda(comandaRequest.getMesa(), comandaRequest.getMenus());
 	}
 
 }

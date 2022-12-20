@@ -24,20 +24,18 @@ public class Comanda implements Serializable{
 	@Column(nullable=false)
 	private Integer menus;
 	
-	@Column(nullable=false)
-	private Integer numeromenus;
 	
 
 	public Comanda() {
 	}
 	
-	public Comanda( Integer mesa, Integer menus, Integer numeromenus) {
+	public Comanda( Integer mesa, Integer menus) {
 		this.mesa = mesa;
 		this.menus = menus;
-		this.numeromenus = numeromenus;
+		
 	}
 
-	public Comanda(Integer id, Integer mesa, Integer menus, Integer numeromenus ) {
+	public Comanda(Integer id, Integer mesa, Integer menus ) {
 	
 		this.id = id;
 	}
@@ -65,14 +63,8 @@ public class Comanda implements Serializable{
 
 	public void setMenus(Integer menus) {
 		this.menus = menus;
-	}
 
-	public Integer getNumeromenus() {
-		return numeromenus;
-	}
-
-	public void setNumeromenus(Integer numeromenus) {
-		this.numeromenus = numeromenus;
+	
 	}
 	private static final long serialVersionUID = 1L;
 	
