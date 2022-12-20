@@ -10,10 +10,10 @@ public class ComandaDTO {
 
 	private Integer id;
 	
-	@NotEmpty(message = Constant.MESA_REQUIRED)
+	@NotNull(message = Constant.MESA_REQUIRED)
 	private Integer mesa;
 	
-	@NotEmpty(message = Constant.NUMEROMENU_REQUIRED)
+	@NotNull(message = Constant.NUMEROMENU_REQUIRED)
 	private Integer menus;
 	
 
