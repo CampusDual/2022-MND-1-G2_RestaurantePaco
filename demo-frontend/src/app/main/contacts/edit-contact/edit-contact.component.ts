@@ -73,7 +73,7 @@ export class EditContactComponent implements OnInit {
 
   redirectList(response: any) {
     if (response.responseCode === 'OK') {
-      this.router.navigate(['/contacts/add']);
+      this.router.navigate(['/contacts']);
     }else{
       console.log(response);
     }
