@@ -7,6 +7,7 @@ import { LoggerService } from 'src/app/services/logger.service';
 import { MenusDataSource } from 'src/app/model/datasource/menus.datasource';
 import { AnyField, AnyPageFilter } from 'src/app/model/rest/filter';
 import { MenusService } from 'src/app/services/menus.service';
+import { Menus } from 'src/app/model/menus';
 
 @Component({
   selector: 'app-edit-contact',
@@ -20,12 +21,20 @@ export class EditContactComponent implements OnInit {
   contact: Contact;
   errores: string[];
   dataSource: MenusDataSource;
-  fields: any;
-  menusService: MenusService;
-  menus: any;
+  fields = ['select',
+  'idMenu',
+  'plato1',
+  'plato2',
+  'postre',
+  'precio',
+]
+  // menus: any;
+
+  menus: menus[] = [];
 
   constructor(
     private fb: FormBuilder,
+    private menusService: MenusService,
     private contactService: ContactService,
     private router: Router,
     private route: ActivatedRoute,
@@ -35,22 +44,27 @@ export class EditContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.createFormGroup();
-    this.dataSource = new MenusDataSource(this.menusService);
+    // this.dataSource = new MenusDataSource(this.menusService);
     const pageFilter = new AnyPageFilter(
       '',
       this.fields.map((field) => new AnyField(field)),
       0,
       50,
-      'id'
-    );
-    // this.dataSource.getMenus(pageFilter).subscribe(
+      'idMenu'
+      );
+      this.menusService.getMenus(pageFilter).subscribe(
       response => {
+        console.log(response);
         // this.menusService = response;
-        this.dataSource.getMenus(pageFilter);
-      }
-    
-
+        // this.dataSource.getMenus(pageFilter);
+        for response.data {
+        this.menus.add('idMenu'),
+        }
+      });
+      
+      
+      
+    this.createFormGroup();
 
     this.idContact = this.route.snapshot.params['id'];
     if (this.idContact) {
@@ -128,6 +142,6 @@ export class EditContactComponent implements OnInit {
  
 }
  interface menus {
-    value: string;
-    viewValue: string;
+    value: number;
+    viewValue: number;
   }
