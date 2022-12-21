@@ -17,6 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ContactsLayoutComponent } from './contacts-layout.component';
 import {MatNativeDateModule} from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -39,6 +40,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         TranslateModule,
         FormsModule,
         MatNativeDateModule,
+        MatSelectModule
     ],
     declarations: [
         ContactsComponent,

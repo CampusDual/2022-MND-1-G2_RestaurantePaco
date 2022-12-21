@@ -14,20 +14,23 @@
             </mat-form-field>
           </div>
 
-          <div class="input-row">
+          <!-- <div class="input-row">
             <mat-form-field fxFlex>
               <input matInput type="number" color="primary" placeholder="{{ 'Menu' | translate }}"
                 formControlName="menus" name="contact-menu" required />
             </mat-form-field>
-          </div>
-          <!-- <mat-form-field >
-            <mat-label>Favorite food</mat-label>
-            <mat-select [(ngModel)]="selectedValue" formControlName="food" name="food" >
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
+          </div> -->
+          <div class="input-row">
+          <mat-form-field fxFlex>
+            <mat-label>Menú</mat-label>
+            <mat-select formControlName="menus" name="menus" >
+              <mat-option></mat-option>
+              <mat-option *ngFor="let menus of menus" [value]="menus.value">
+                {{menus.viewValue}}
               </mat-option>
             </mat-select>
-          </mat-form-field> -->
+          </mat-form-field>
+        </div>
 
 
           <mat-card-actions>
@@ -36,9 +39,9 @@
                 [formNoValidate]="true">{{ 'button.cancel' | translate }}</button>
               <button fxFlex="25" fxFlex.xs="30" mat-raised-button type="submit" color="primary"
                 [disabled]="!contactForm.valid">{{ 'button.save' | translate }}</button>
-              <button mat-raised-button (click)="onAddMenu()">
+              <!-- <button mat-raised-button (click)="onAddMenu()">
                 <mat-icon>add</mat-icon> {{ "new" | translate }}
-              </button>
+              </button> -->
             </div>
           </mat-card-actions>
         </mat-card-content>
@@ -46,11 +49,3 @@
     </div>
   </div>
 </form>
-<!--<mat-form-field>
-  <mat-label>Favorite food</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>-->

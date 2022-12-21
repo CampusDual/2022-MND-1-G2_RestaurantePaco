@@ -4,6 +4,9 @@ import { Contact } from 'src/app/model/contact';
 import { ContactService } from 'src/app/services/contact.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { LoggerService } from 'src/app/services/logger.service';
+import { MenusDataSource } from 'src/app/model/datasource/menus.datasource';
+import { AnyField, AnyPageFilter } from 'src/app/model/rest/filter';
+import { MenusService } from 'src/app/services/menus.service';
 
 @Component({
   selector: 'app-edit-contact',
@@ -16,6 +19,10 @@ export class EditContactComponent implements OnInit {
   contactForm: FormGroup;
   contact: Contact;
   errores: string[];
+  dataSource: MenusDataSource;
+  fields: any;
+  menusService: MenusService;
+  menus: any;
 
   constructor(
     private fb: FormBuilder,
@@ -29,6 +36,22 @@ export class EditContactComponent implements OnInit {
 
   ngOnInit() {
     this.createFormGroup();
+    this.dataSource = new MenusDataSource(this.menusService);
+    const pageFilter = new AnyPageFilter(
+      '',
+      this.fields.map((field) => new AnyField(field)),
+      0,
+      50,
+      'id'
+    );
+    // this.dataSource.getMenus(pageFilter).subscribe(
+      response => {
+        // this.menusService = response;
+        this.dataSource.getMenus(pageFilter);
+      }
+    
+
+
     this.idContact = this.route.snapshot.params['id'];
     if (this.idContact) {
       this.contactService.getContact(this.idContact).subscribe(
@@ -104,7 +127,7 @@ export class EditContactComponent implements OnInit {
   }
  
 }
-//  interface Food {
-//     value: string;
-//     viewValue: string;
-//   }
+ interface menus {
+    value: string;
+    viewValue: string;
+  }

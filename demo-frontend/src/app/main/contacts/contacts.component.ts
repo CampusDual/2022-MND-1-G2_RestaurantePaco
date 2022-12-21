@@ -39,6 +39,12 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   selection = new SelectionModel<Contact>(true, []);
   error = false;
 
+  // foods: Food[] = [
+  //   {value: 'steak-0', viewValue: 'Steak'},
+  //   {value: 'pizza-1', viewValue: 'Pizza'},
+  //   {value: 'tacos-2', viewValue: 'Tacos'},
+  // ];
+
   @ViewChild('edit') editTemplate: any;
   highlightedRow: Contact;
 
@@ -182,18 +188,6 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   //   viewValue: string;
   // }
 
-  // @Component({
-  //   selector: 'select-form-example',
-  //   templateUrl: 'select-form-example.html',
-  // })
-  // export class SelectFormExample {
-  //   selectedValue: string;
-  //   selectedCar: string;
-    
-  // foods: Food[] = [
-  //   {value: 'steak-0', viewValue: 'Steak'},
-  //   {value: 'pizza-1', viewValue: 'Pizza'},
-  //   {value: 'tacos-2', viewValue: 'Tacos'},
-  // ];
+ 
 
 
