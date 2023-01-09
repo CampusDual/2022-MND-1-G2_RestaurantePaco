@@ -39,7 +39,7 @@ export class NavComponent implements OnInit, OnDestroy {
     {
       icon: 'menus',
       route: 'menus',
-      title: 'Menus',// CAMBIADO      CAMBIADO
+      title: 'Menús',// CAMBIADO      CAMBIADO
       allowedRoles: ['MENUS']
     },
   ];

@@ -54,6 +54,7 @@ export class MenuseditComponent implements OnInit {
   createFormGroup() {
     this.MenusForm = this.fb.group({
       id: [this.menu.idMenu],
+      nombreMenu: [this.menu.nombreMenu],
       plato1: [this.menu.plato1],
       plato2: [this.menu.plato2],
       postre: [this.menu.postre],

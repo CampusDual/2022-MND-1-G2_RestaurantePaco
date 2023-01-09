@@ -22,20 +22,20 @@ public class Comanda implements Serializable{
 	private Integer mesa;
 	
 	@Column(nullable=false)
-	private Integer menus;
+	private String menus;
 	
 	
 
 	public Comanda() {
 	}
 	
-	public Comanda( Integer mesa, Integer menus) {
+	public Comanda( Integer mesa, String menus) {
 		this.mesa = mesa;
 		this.menus = menus;
 		
 	}
 
-	public Comanda(Integer id, Integer mesa, Integer menus ) {
+	public Comanda(Integer id, Integer mesa, String menus ) {
 	
 		this.id = id;
 	}
@@ -57,11 +57,11 @@ public class Comanda implements Serializable{
 		this.mesa = mesa;
 	}
 
-	public Integer getMenus() {
+	public String getMenus() {
 		return menus;
 	}
 
-	public void setMenus(Integer menus) {
+	public void setMenus(String menus) {
 		this.menus = menus;
 
 	

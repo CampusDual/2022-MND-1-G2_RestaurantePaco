@@ -10,7 +10,7 @@ import { MenusService } from 'src/app/services/menus.service';
 import { Menus } from 'src/app/model/menus';
 
 interface Menuschek {
-  value: number;
+  value: string;
   viewValue: string;
 }
 
@@ -27,6 +27,7 @@ export class EditContactComponent implements OnInit {
   errores: string[];
   dataSource: MenusDataSource;
   fields = ['select',
+  'nombreMenu',
     'idMenu',
     'plato1',
     'plato2',
@@ -63,9 +64,9 @@ export class EditContactComponent implements OnInit {
         console.log(response);
        
         for (var valor of response.data) {
-          console.log(valor.idMenu);
-          console.log(valor.plato1);
-          let aas: Menuschek = { value: valor.idMenu, viewValue: valor.plato1 };
+          console.log(valor.nombreMenu);
+          console.log(valor.nombreMenu);
+          let aas: Menuschek = { value: valor.nombreMenu, viewValue: valor.nombreMenu };
           this.menuschek.push(aas);
         }
       
@@ -142,11 +143,6 @@ export class EditContactComponent implements OnInit {
   }
   selectedValue: string;
 
-  // foods: Food[] = [
-  //   {value: 'steak-0', viewValue: 'Steak'},
-  //   {value: 'pizza-1', viewValue: 'Pizza'},
-  //   {value: 'tacos-2', viewValue: 'Tacos'},
-  // ];
 
 
   onAddMenu() {

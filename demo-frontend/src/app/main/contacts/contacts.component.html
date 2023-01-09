@@ -45,14 +45,10 @@
       matSortDisableClear
       class="w-full"
     >
-      <!-- Checkbox Column -->
+  
       <ng-container matColumnDef="select">
         <th id="header" mat-header-cell *matHeaderCellDef>
-          <!-- <mat-checkbox
-            (change)="$event ? masterToggle() : null"
-            [checked]="selection.hasValue() && isAllSelected()"
-            [indeterminate]="selection.hasValue() && !isAllSelected()"
-          > -->
+       
           <mat-checkbox
           (change)="$event ? masterToggle() : null"
         >
@@ -79,7 +75,7 @@
 
       <ng-container matColumnDef="menus">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Menu" | translate }}
+          {{ "Menú" | translate }}
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="menus">
           {{ row.menus }}

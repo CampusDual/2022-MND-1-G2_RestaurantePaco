@@ -39,11 +39,6 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   selection = new SelectionModel<Contact>(true, []);
   error = false;
 
-  // foods: Food[] = [
-  //   {value: 'steak-0', viewValue: 'Steak'},
-  //   {value: 'pizza-1', viewValue: 'Pizza'},
-  //   {value: 'tacos-2', viewValue: 'Tacos'},
-  // ];
 
   @ViewChild('edit') editTemplate: any;
   highlightedRow: Contact;

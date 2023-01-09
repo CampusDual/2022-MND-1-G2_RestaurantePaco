@@ -14,7 +14,7 @@ public class ComandaDTO {
 	private Integer mesa;
 	
 	@NotNull(message = Constant.NUMEROMENU_REQUIRED)
-	private Integer menus;
+	private String menus;
 	
 
 	public Integer getId() {
@@ -33,11 +33,11 @@ public class ComandaDTO {
 		this.mesa = mesa;
 	}
 
-	public Integer getMenus() {
+	public String getMenus() {
 		return menus;
 	}
 
-	public void setMenus(Integer menus) {
+	public void setMenus(String menus) {
 		this.menus = menus;
 	}
 

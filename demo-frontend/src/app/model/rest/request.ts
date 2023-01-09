@@ -18,24 +18,11 @@ export class QuerySortPaginationRequest {
 }
 export class CreateContactRequest {
 
-  // name: string;
-  // surname1: string;
-  // surname2: string;
-  // phone: number;
-  // email: string;
-
   mesa: number;
-  menus: number;
-
-
+  menus: string;
 
   constructor(contact: Contact) {
-    // this.name = contact.name;
-    // this.surname1 = contact.surname1;
-    // this.surname2 = contact.surname2;
-    // this.phone = contact.phone;
-    // this.email = contact.email;
-    
+        
     this.mesa = contact.mesa;
     this.menus=contact.menus;
   }
@@ -63,6 +50,7 @@ export class EditContactRequest extends CreateContactRequest {
 
 export class CreateMenusRequest {
   //idMenu: number;
+  nombreMenu: string;
   plato1: string;
   plato2: string;
   postre:string;
@@ -70,6 +58,7 @@ export class CreateMenusRequest {
 
   constructor(menus: Menus) {
     //this.idMenu = menus.idMenu;
+    this.nombreMenu=menus.nombreMenu;
     this.plato1 = menus.plato1;
     this.plato2 = menus.plato2;
     this.postre = menus.postre;

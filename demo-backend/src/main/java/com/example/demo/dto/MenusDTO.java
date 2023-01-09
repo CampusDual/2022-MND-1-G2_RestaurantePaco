@@ -8,6 +8,10 @@ import com.example.demo.utils.Constant;
 public class MenusDTO {
 
 	private Integer idMenu;
+	
+	@NotEmpty(message = Constant.NOMBREMENU_REQUIRED)
+	private String nombreMenu;
+	
 	@NotEmpty(message = Constant.PLATO1_REQUIRED)
 	private String plato1;
 	
@@ -28,6 +32,14 @@ public class MenusDTO {
 		this.idMenu = id;
 	}
 
+	public String getNombreMenu() {
+		return nombreMenu;
+	}
+
+	public void setNombreMenu(String nombreMenu) {
+		this.nombreMenu = nombreMenu;
+	}
+	
 	public String getPlato1() {
 		return plato1;
 	}

@@ -43,7 +43,15 @@
           {{row.idMenu}}
         </mat-cell>
       </ng-container>
-
+      
+      <ng-container matColumnDef="nombreMenu">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          {{ "Nombre menú" | translate }}
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="nombreMenu">
+          {{row.nombreMenu}}
+        </mat-cell>
+      </ng-container>
 
       <ng-container matColumnDef="plato1">
         <mat-header-cell *matHeaderCellDef mat-sort-header>

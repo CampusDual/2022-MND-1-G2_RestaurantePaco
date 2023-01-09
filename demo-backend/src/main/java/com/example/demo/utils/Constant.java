@@ -20,6 +20,7 @@ public class Constant {
 	public static final String UNKNOWN_ERROR ="UNKNOWN_ERROR";
 //	añadimos menús
 	public static final String MENU_REQUIRED="MENU_REQUIRED";
+	public static final String NOMBREMENU_REQUIRED="NOMBREMENU_REQUIRED";
 	public static final String PLATO1_REQUIRED="PLATO1_REQUIRED";
 	public static final String PLATO2_REQUIRED= "PLATO2_REQUIRED";
 	public static final String POSTRE_REQUIRED="POSTRE_REQUIRED";
