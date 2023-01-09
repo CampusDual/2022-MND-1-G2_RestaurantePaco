@@ -9,6 +9,11 @@ import { AnyField, AnyPageFilter } from 'src/app/model/rest/filter';
 import { MenusService } from 'src/app/services/menus.service';
 import { Menus } from 'src/app/model/menus';
 
+interface Menuschek {
+  value: number;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-edit-contact',
   templateUrl: './edit-contact.component.html',
@@ -22,15 +27,15 @@ export class EditContactComponent implements OnInit {
   errores: string[];
   dataSource: MenusDataSource;
   fields = ['select',
-  'idMenu',
-  'plato1',
-  'plato2',
-  'postre',
-  'precio',
-]
+    'idMenu',
+    'plato1',
+    'plato2',
+    'postre',
+    'precio',
+  ]
   // menus: any;
 
-  menus: menus[] = [];
+  menuschek: Menuschek[] = [];
 
   constructor(
     private fb: FormBuilder,
@@ -43,27 +48,31 @@ export class EditContactComponent implements OnInit {
     this.contact = new Contact();
   }
 
+
   ngOnInit() {
-    // this.dataSource = new MenusDataSource(this.menusService);
+    
     const pageFilter = new AnyPageFilter(
       '',
       this.fields.map((field) => new AnyField(field)),
       0,
       50,
       'idMenu'
-      );
-      this.menusService.getMenus(pageFilter).subscribe(
+    );
+    this.menusService.getMenus(pageFilter).subscribe(
       response => {
         console.log(response);
-        // this.menusService = response;
-        // this.dataSource.getMenus(pageFilter);
-        for response.data {
-        this.menus.add('idMenu'),
+       
+        for (var valor of response.data) {
+          console.log(valor.idMenu);
+          console.log(valor.plato1);
+          let aas: Menuschek = { value: valor.idMenu, viewValue: valor.plato1 };
+          this.menuschek.push(aas);
         }
+      
       });
-      
-      
-      
+
+
+
     this.createFormGroup();
 
     this.idContact = this.route.snapshot.params['id'];
@@ -77,11 +86,14 @@ export class EditContactComponent implements OnInit {
       );
     }
   }
+  addmenu ( aasf: any){
+    this.menuschek.push(aasf);
+  }
 
 
 
   onFormChanges() {
-    this.contactForm.valueChanges.subscribe((val) => {});
+    this.contactForm.valueChanges.subscribe((val) => { });
   }
 
   createFormGroup() {
@@ -90,14 +102,15 @@ export class EditContactComponent implements OnInit {
       mesa: [this.contact.mesa],
       menus: [this.contact.menus],
       // food: this.foods,
-      
+
     });
+    //this.menuschek = aa
   }
 
   save() {
     const newContact: Contact = Object.assign({}, this.contactForm.value);
     if (newContact.id) {
-      this.contactService.editContact(newContact).subscribe((response) =>{
+      this.contactService.editContact(newContact).subscribe((response) => {
         this.redirectList(response);
       });
     } else {
@@ -106,12 +119,12 @@ export class EditContactComponent implements OnInit {
       });
     }
   }
-  
+
 
   redirectList(response: any) {
     if (response.responseCode === 'OK') {
       this.router.navigate(['/contacts']);
-    }else{
+    } else {
       console.log(response);
     }
   }
@@ -128,20 +141,16 @@ export class EditContactComponent implements OnInit {
     this.router.navigate(['/contacts']);
   }
   selectedValue: string;
-  
-// foods: Food[] = [
-//   {value: 'steak-0', viewValue: 'Steak'},
-//   {value: 'pizza-1', viewValue: 'Pizza'},
-//   {value: 'tacos-2', viewValue: 'Tacos'},
-// ];
 
-  
+  // foods: Food[] = [
+  //   {value: 'steak-0', viewValue: 'Steak'},
+  //   {value: 'pizza-1', viewValue: 'Pizza'},
+  //   {value: 'tacos-2', viewValue: 'Tacos'},
+  // ];
+
+
   onAddMenu() {
     //this.router.navigate(['/contacts/add']);
   }
- 
+
 }
- interface menus {
-    value: number;
-    viewValue: number;
-  }

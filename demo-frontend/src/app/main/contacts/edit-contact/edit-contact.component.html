@@ -25,7 +25,7 @@
             <mat-label>Menú</mat-label>
             <mat-select formControlName="menus" name="menus" >
               <mat-option></mat-option>
-              <mat-option *ngFor="let menus of menus" [value]="menus.value">
+              <mat-option *ngFor="let menus of menuschek" [value]="menus.value">
                 {{menus.viewValue}}
               </mat-option>
             </mat-select>
