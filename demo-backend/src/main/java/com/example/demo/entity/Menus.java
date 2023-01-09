@@ -19,6 +19,9 @@ public class Menus implements Serializable{
 	private Integer idMenu; // cambiado por Angy
 	
 	@Column(nullable=false)
+	private String nombreMenu;
+	
+	@Column(nullable=false)
 	private String plato1;
 	
 	@Column(nullable=false)
@@ -36,7 +39,8 @@ public class Menus implements Serializable{
 	
 	
 	
-	public Menus(String plato1, String plato2, String postre, Integer precio) {
+	public Menus(String nombreMenu,String plato1, String plato2, String postre, Integer precio) {
+		this.nombreMenu = nombreMenu; 
 		this.plato1 = plato1;
 		this.plato2 = plato2;
 		this.postre = postre;
@@ -44,13 +48,12 @@ public class Menus implements Serializable{
 	}
 
 
-	public Menus(Integer idMenu, String plato1, String plato2, String postre, Integer precio) {
-		this(plato1, plato2, postre,precio);
+	public Menus(Integer idMenu,String nombreMenu, String plato1, String plato2, String postre, Integer precio) {
+		this(nombreMenu,plato1, plato2, postre,precio);
 		this.idMenu = idMenu;
+	
+	
 	}
-
-
-
 	public Integer getIdMenu() {
 		return idMenu;
 	}
@@ -59,6 +62,18 @@ public class Menus implements Serializable{
 
 	public void setIdMenu(Integer idMenu) {
 		this.idMenu = idMenu;
+	}
+
+
+
+	public String getNombreMenu() {
+		return nombreMenu;
+	}
+
+
+
+	public void setNombreMenu(String nombreMenu) {
+		this.nombreMenu = nombreMenu;
 	}
 
 

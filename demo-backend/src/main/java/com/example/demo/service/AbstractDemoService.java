@@ -31,7 +31,7 @@ public class AbstractDemoService {
 		return new Comanda(comandaRequest.getId(), comandaRequest.getMesa(), comandaRequest.getMenus());
 	}
 	public Menus fromEditMenusRequest(Menus menusRequest) {
-		return new Menus(menusRequest.getIdMenu(),menusRequest.getPlato1(), menusRequest.getPlato2(), menusRequest.getPostre(),
+		return new Menus(menusRequest.getIdMenu(),menusRequest.getNombreMenu(),menusRequest.getPlato1(), menusRequest.getPlato2(), menusRequest.getPostre(),
 				menusRequest.getPrecio());
 	}
 
