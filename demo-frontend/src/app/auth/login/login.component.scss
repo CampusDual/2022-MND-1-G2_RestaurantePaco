@@ -1,8 +1,8 @@
 .login-outer-container {
   margin: 8px;
   min-height: 640px;
-  background-color: #bdbdbd;
-  background-image: url(../../../assets/images/code_background.jpg);
+  background-color: #f8f7f7;
+  background-image: url(https://tabernadocampo.com/wp-content/uploads/2020/03/taberna-campo_culleredo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,7 @@
     -webkit-transform: translate(-50%, 0);
     width: 250px;
     padding: 1em;
-    background-color: #FFFFFF;
+    background-color: #ffffffab;
 
     h1 {
       text-align: center;
@@ -29,16 +29,16 @@
       width: 150px;
       height: 150px;
       position: relative;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       top: -75px;
       left: 50%;
       -webkit-transform: translate(-50%, 0%);
 
       img {
-        max-height: 125px;
-        max-width: 125px;
-        margin-left: 12px;
-        margin-top: 46px;
+        max-height: 120px;
+        max-width: 120px;
+        margin-left: 20px;
+        margin-top: 20px;
       }
     }
 
@@ -83,7 +83,7 @@
 @media (min-width: 480px) {
   .login-outer-container {
     .login-inner-container {
-      width: 370px;
+      width: 350px;
       padding-right: 2em;
       padding-left: 2em;
 
@@ -100,7 +100,7 @@
 @media (min-width: 600px) {
   .login-outer-container {
     .login-inner-container {
-      width: 450px;
+      width: 400px;
       padding-right: 5em;
       padding-left: 5em;
 

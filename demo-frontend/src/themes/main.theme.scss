@@ -112,7 +112,7 @@ th.mat-header-cell {
     min-height: $app-command-bar-height-mobile !important;
   }
 
-  background-color: #f5f5f5;
+  background-color: #ff0303;
 
 }
 
@@ -258,12 +258,12 @@ $task-list-width: 320px; // 240px;
 }
 
 .app-task-list-container {
-  border: 1px solid lightgray;
+  border: 1px solid rgb(0, 255, 200);
 }
 
 .app-task-container {
-  background: white;
-  border: 1px solid lightgray;
+  background: rgb(255, 0, 242);
+  border: 1px solid rgb(238, 255, 5);
   padding-top: 0;
   margin-top: 0;
   height: calc(100vh - 256px);
@@ -357,11 +357,11 @@ $task-list-width: 320px; // 240px;
 }
 
 .mat-header-row {
-  background-color: #f5f5f5;
+  background-color: hsla(36, 74%, 49%, 0.658);
 }
 
 .mat-footer-row {
-  background-color: #f5f5f5;
+  background-color: #06ff3c;
 }
 
 a:active {
