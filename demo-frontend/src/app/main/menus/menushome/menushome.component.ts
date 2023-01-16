@@ -21,8 +21,8 @@ export class MenushomeComponent implements OnInit {
   dataSource: MenusDataSource
   displayedColumns = [ 
     'select',
-    'nombreMenu',
     'idMenu',
+    'nombreMenu',
     'plato1',
     'plato2',
     'postre',

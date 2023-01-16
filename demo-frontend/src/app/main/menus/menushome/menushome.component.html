@@ -43,7 +43,7 @@
 
       <ng-container matColumnDef="idMenu">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Número menú" | translate }}
+          <h2><b>{{ "Número menú" | translate }}</b></h2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="idMenu">
           {{row.idMenu}}
@@ -52,7 +52,7 @@
       
       <ng-container matColumnDef="nombreMenu">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Nombre menú" | translate }}
+          <h2><b>{{ "Nombre menú" | translate }}</b></h2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="nombreMenu">
           {{row.nombreMenu}}
@@ -61,7 +61,7 @@
 
       <ng-container matColumnDef="plato1">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Plato 1" | translate }}
+          <h2><b>{{ "Plato 1" | translate }}</b></h2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="plato1">
           {{ row.plato1 }}
@@ -70,7 +70,7 @@
 
       <ng-container matColumnDef="plato2">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Plato 2" | translate }}
+          <h2><b>{{ "Plato 2" | translate }}</b></h2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="plato2">
           {{ row.plato2 }}
@@ -79,7 +79,7 @@
 
       <ng-container matColumnDef="postre">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Postre" | translate }}
+          <h2><b>{{ "Postre" | translate }}</b></h2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="postre">
           {{ row.postre }}
@@ -88,7 +88,7 @@
 
       <ng-container matColumnDef="precio">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "Precio" | translate }}
+          <h2><b>{{ "Precio" | translate }}</b></h2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="precio">
           {{ row.precio }}
