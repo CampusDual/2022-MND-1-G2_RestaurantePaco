@@ -11,9 +11,11 @@
     "title": "Demo"
   },
   "menu": {
-    "home": "Home",
+    "home": "Inicio",
     "contacts": "Contactos",
-    "logout": "Pechar sesión"
+    "logout": "Pechar sesión",
+    "comandas":"Comandas",
+    "menus":"Menús"
   },
   "language": {
     "spanish": "Castelán",

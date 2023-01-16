@@ -33,13 +33,13 @@ export class NavComponent implements OnInit, OnDestroy {
     {
       icon: 'people',
       route: 'contacts',
-      title: 'Comandas',
+      title: 'menu.comandas',
       allowedRoles: ['CONTACTS']
     },
     {
       icon: 'menus',
       route: 'menus',
-      title: 'Menús',// CAMBIADO      CAMBIADO
+      title: 'menu.menus',// CAMBIADO      CAMBIADO
       allowedRoles: ['MENUS']
     },
   ];

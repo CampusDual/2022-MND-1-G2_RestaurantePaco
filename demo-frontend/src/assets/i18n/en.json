@@ -13,7 +13,9 @@
   "menu": {
     "home": "Home",
     "contacts": "Contacts",
-    "logout": "Logout"
+    "logout": "Logout",
+    "comandas":"Commands",
+    "menus":"Menus"
   },
   "language": {
     "spanish": "Spanish",
