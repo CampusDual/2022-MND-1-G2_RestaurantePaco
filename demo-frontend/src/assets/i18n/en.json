@@ -22,12 +22,17 @@
   },
   "table": {
     "contacts": {
-      "name": "Name",
-      "surname1": "First Surname",
-      "surname2": "Second Surname",
-      "phone": "Phone",
-      "email": "E-Mail"
+      "mesa": "Table",
+      "menus": "Menu"
     }
+  },
+  "menus":{
+    "idmenu":"Menu number",
+    "nombremenu":"Menu name",
+    "plato1":"Dish 1",
+    "plato2":"Dish 2",
+    "postre":"Dessert",
+    "precio":"Price"
   },
   "form": {
     "contact": "Contact"
@@ -44,6 +49,8 @@
     "previous_page": "Previous page",
     "of": "of"
   },
+
+  
   "EN": "English",
   "ES": "Spanish",
   "GL": "Galician",
@@ -86,4 +93,5 @@
   "phonerequired":"Phone is a required field",
   "phonepattern": "The phone format is not correct",
   "emailpattern": "The email format is not correct"
+  
 }

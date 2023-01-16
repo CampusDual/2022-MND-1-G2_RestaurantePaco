@@ -22,12 +22,17 @@
   },
   "table": {
     "contacts": {
-      "name": "Nombre",
-      "surname1": "Primer apellido",
-      "surname2": "Segundo apellido",
-      "phone": "Teléfono",
-      "email": "E-Mail"
+      "mesa": "Mesa",
+      "menus": "Menú"
     }
+  },
+  "menus":{
+    "idmenu":"Número de menú",
+    "nombremenu":"Nombre del menú",
+    "plato1":"Plato 1",
+    "plato2":"Plato 2",
+    "postre":"Postre",
+    "precio":"Precio"
   },
   "form": {
     "contact": "Contacto"
