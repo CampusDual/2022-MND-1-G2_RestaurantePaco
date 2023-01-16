@@ -19,27 +19,27 @@ public class Constant {
 	public static final String CONTACT_CONSTRAINT_VIOLATION ="CONTACT_CONSTRAINT_VIOLATION";
 	public static final String UNKNOWN_ERROR ="UNKNOWN_ERROR";
 //	añadimos menús
-	public static final String MENU_REQUIRED="MENU_REQUIRED";
-	public static final String NOMBREMENU_REQUIRED="NOMBREMENU_REQUIRED";
-	public static final String PLATO1_REQUIRED="PLATO1_REQUIRED";
-	public static final String PLATO2_REQUIRED= "PLATO2_REQUIRED";
-	public static final String POSTRE_REQUIRED="POSTRE_REQUIRED";
-	public static final String PRECIO_REQUIRED="PRECIO_REQUIRED";
-	public static final String MENU_NOT_EXISTS="MENU_NOT_EXISTS";
-	public static final String MENU_EDIT_SUCCESS ="MENU_EDIT_SUCCESS";
-	public static final String MENU_NOT_EDIT ="MENU_NOT_EDIT";
-	public static final String MENU_DELETE_SUCCESS ="MENU_DELETE_SUCCESS";
-	public static final String MENU_NOT_DELETE ="MENU_NOT_DELETE";
-	public static final String MENU_CREATE_SUCCESS ="MENU_CREATE_SUCCESS";
-	public static final String MENU_NOT_CREATED ="MENU_NOT_CREATED";
+	public static final String MENU_REQUIRED="Es necesario el menú";
+	public static final String NOMBREMENU_REQUIRED="Es necesario el nombre del menú";
+	public static final String PLATO1_REQUIRED="Es necesario el segundo plato";
+	public static final String PLATO2_REQUIRED= "Es necesario el segundo plato";
+	public static final String POSTRE_REQUIRED="Es necesario el postre";
+	public static final String PRECIO_REQUIRED="Es necesario el precio";
+	public static final String MENU_NOT_EXISTS="El menú no existe";
+	public static final String MENU_EDIT_SUCCESS ="Menú editado";
+	public static final String MENU_NOT_EDIT ="Menú no editado";
+	public static final String MENU_DELETE_SUCCESS ="Menú eliminado";
+	public static final String MENU_NOT_DELETE ="Menú no eliminado";
+	public static final String MENU_CREATE_SUCCESS ="Menú creado";
+	public static final String MENU_NOT_CREATED ="Menú no creado";
 	
 	//Contact message
-	public static final String COMANDA_CREATE_SUCCESS ="COMANDA_CREATE_SUCCESS";
-	public static final String COMANDA_NOT_CREATED ="COMANDA_NOT_CREATED";
-	public static final String COMANDA_EDIT_SUCCESS ="COMANDA_EDIT_SUCCESS";
-	public static final String COMANDA_NOT_EDIT ="COMANDA_NOT_EDIT";
-	public static final String COMANDA_DELETE_SUCCESS ="COMANDA_DELETE_SUCCESS";
-	public static final String COMANDA_NOT_DELETE ="COMANDA_NOT_DELETE";
+	public static final String COMANDA_CREATE_SUCCESS ="Comanda creada";
+	public static final String COMANDA_NOT_CREATED ="Comanda no creada";
+	public static final String COMANDA_EDIT_SUCCESS ="Comanda editada";
+	public static final String COMANDA_NOT_EDIT ="Comanda no editada";
+	public static final String COMANDA_DELETE_SUCCESS ="Comanda eliminada";
+	public static final String COMANDA_NOT_DELETE ="Comanda no eliminada";
 	
 	//User message
 	public static final String USER_CREATE_SUCCESS ="USER_CREATE_SUCCESS";
