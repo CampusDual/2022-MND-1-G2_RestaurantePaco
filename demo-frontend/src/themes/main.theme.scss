@@ -10,7 +10,7 @@
 // https://material.angular.io/guide/typography
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Open Sans, sans-serif'
+  $font-family: 'Monotype Corsiva'
 );
 
 @include mat-core($custom-typography);
@@ -42,7 +42,7 @@ html, body {
 }
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Monotype Corsiva', sans-serif;
 }
 
 .page-content {
