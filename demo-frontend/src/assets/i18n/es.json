@@ -36,6 +36,18 @@
     "postre":"Postre",
     "precio":"Precio"
   },
+  "ed":{
+    "cont":{
+      "mesa":"Mesa"
+    }
+  },
+  "edit": {
+    "nombreMenu": "Nombre del menú",
+    "plato1": "Plato 1",
+    "plato2":"Plato 2",
+    "postre":"Postre",
+    "precio":"Precio"
+  },
   "form": {
     "contact": "Contacto"
   },

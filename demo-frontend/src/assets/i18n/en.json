@@ -28,6 +28,11 @@
       "menus": "Menu"
     }
   },
+  "ed":{
+    "cont":{
+      "mesa":"Table"
+    }
+  },
   "menus":{
     "idmenu":"Menu number",
     "nombremenu":"Menu name",
@@ -36,6 +41,13 @@
     "postre":"Dessert",
     "precio":"Price"
   },
+    "edit": {
+      "nombreMenu": "Menu name",
+      "plato1": "Dish 1",
+      "plato2":"Dish 2",
+      "postre":"Dessert",
+      "precio":"Price"
+    },
   "form": {
     "contact": "Contact"
   },

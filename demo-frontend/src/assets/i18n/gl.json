@@ -28,12 +28,24 @@
       "menus": "Menú"
     }
   },
+  "ed":{
+    "cont":{
+      "mesa":"Mesa"
+    }
+  },
   "menus":{
     "idmenu":"Número do menú",
     "nombremenu":"Nome do menú",
     "plato1":"Prato 1",
     "plato2":"Prato 2",
     "Postre":"Postre",
+    "precio":"Prezo"
+  },
+  "edit": {
+    "nombreMenu": "Nome do menú",
+    "plato1": "Prato 1",
+    "plato2":"Prato 2",
+    "postre":"Postre",
     "precio":"Prezo"
   },
   "form": {
