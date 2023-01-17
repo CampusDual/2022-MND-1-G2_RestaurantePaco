@@ -6,6 +6,7 @@ import { LoggerService } from 'src/app/services/logger.service';
 import { SidenavService } from 'src/app/services/sidenav.service';
 import { AuthGuard } from 'src/app/auth/auth.guard';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 interface ROUTE {
   icon?: string;
@@ -22,6 +23,7 @@ interface ROUTE {
 export class NavComponent implements OnInit, OnDestroy {
 
   @ViewChild('commandbarSidenav') public sidenav: MatSidenav;
+  
 
   sidenavRoutes: ROUTE[] = [
     {
@@ -46,8 +48,12 @@ export class NavComponent implements OnInit, OnDestroy {
 
   protected subscription: Subscription;
 
+  myDate: String ;
+
   constructor(private commandBarSidenavService: SidenavService, private authService: AuthService, private logger: LoggerService,
-              private authGuard: AuthGuard, private router: Router) { }
+              private authGuard: AuthGuard, private router: Router, private datePipe: DatePipe) {
+                this.myDate = this.datePipe.transform(new Date, 'dd-MM-YYYY');
+              }
 
   ngOnInit() {
     this.logger.info('NavComponent: ngOnInit()');

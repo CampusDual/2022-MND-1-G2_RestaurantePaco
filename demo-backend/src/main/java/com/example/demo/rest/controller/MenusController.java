@@ -51,7 +51,7 @@ public class MenusController {
 	 * @param id el id del contacto de la BDD.
 	 * @return el contacto cuyo id sea el pasado por parámetros.
 	 */
-	@GetMapping("/getMenus")
+	@GetMapping("/getMenu")
 	@PreAuthorize("hasAnyAuthority('MENUS')")
 	public ResponseEntity<?> getMenus(@RequestParam(value = "idMenu") Integer idMenu) {
 		LOGGER.info("getMenus in progress...");

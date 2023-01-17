@@ -36,7 +36,7 @@ public class Comanda implements Serializable{
 	}
 
 	public Comanda(Integer id, Integer mesa, String menus ) {
-	
+			this(mesa,menus);
 		this.id = id;
 	}
 

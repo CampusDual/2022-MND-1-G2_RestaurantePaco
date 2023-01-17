@@ -37,7 +37,7 @@ export class MenuseditComponent implements OnInit {
   }
   ngOnInit() {
     this.createFormGroup();
-    this.idMenu = this.route.snapshot.params['id'];
+    this.idMenu = this.route.snapshot.params['idMenu'];
     if (this.idMenu) {
       this.menuService.getMenu(this.idMenu).subscribe(
         response => {
@@ -53,7 +53,7 @@ export class MenuseditComponent implements OnInit {
   }
   createFormGroup() {
     this.MenusForm = this.fb.group({
-      id: [this.menu.idMenu],
+      idMenu: [this.menu.idMenu],
       nombreMenu: [this.menu.nombreMenu],
       plato1: [this.menu.plato1],
       plato2: [this.menu.plato2],
@@ -64,6 +64,7 @@ export class MenuseditComponent implements OnInit {
   }
   save() {
     const newMenu: Menus = Object.assign({}, this.MenusForm.value);
+    debugger
     if (newMenu.idMenu) {
       this.menuService.editMenus(newMenu).subscribe((response) =>{
         this.redirectList(response);
