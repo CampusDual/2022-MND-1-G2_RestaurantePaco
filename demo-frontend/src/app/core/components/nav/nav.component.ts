@@ -39,7 +39,7 @@ export class NavComponent implements OnInit, OnDestroy {
       allowedRoles: ['CONTACTS']
     },
     {
-      icon: 'menus',
+      icon: 'book-open',
       route: 'menus',
       title: 'menu.menus',// CAMBIADO      CAMBIADO
       allowedRoles: ['MENUS']
