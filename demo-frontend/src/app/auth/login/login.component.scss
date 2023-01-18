@@ -1,6 +1,6 @@
 .login-outer-container {
   margin: 8px;
-  min-height: 640px;
+  min-height: 605px;
   background-color: #f8f7f7;
   background-image: url(https://tabernadocampo.com/wp-content/uploads/2020/03/taberna-campo_culleredo.jpg);
   background-position: center;
@@ -117,8 +117,8 @@
 @media (min-height: 580px) {
   .login-outer-container {
     .login-inner-container {
-      padding-top: 8em;
-      padding-bottom: 5em;
+      padding-top: 6em;
+      padding-bottom: 2em;
       top: 50%;
       transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
