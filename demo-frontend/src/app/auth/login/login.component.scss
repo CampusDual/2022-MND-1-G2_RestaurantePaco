@@ -25,9 +25,8 @@
     }
 
     .logo-container {
-      //border: none;
       border-radius: 50%;
-      width: 150px ;
+      width: 150px;
       height: 150px;
       position: relative;
       background-color: #ffffff;
@@ -36,12 +35,10 @@
       -webkit-transform: translate(-50%, 0%);
 
       img {
-        
-        max-height: 110px;
-        max-width: 110px;
+        max-height: 120px;
+        max-width: 120px;
         margin-left: 20px;
-        margin-top: 25px;
-        //margin-right: auto;
+        margin-top: 20px;
       }
     }
 
@@ -71,12 +68,12 @@
     }
 
     .dark_text {
-      color: #c5c5c5;
+      color: #0c0c0c;
       font-size: 9pt;
     }
 
     .title_text {
-      color: #7b7a79;
+      color: #080808;
       font-size: 10pt;
       font-weight: bold;
     }
