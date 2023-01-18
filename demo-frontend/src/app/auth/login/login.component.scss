@@ -15,7 +15,7 @@
     transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
-    width: 100px;
+    width: 250px;
     padding: 1em;
     background-color: #ffffffab;
 
@@ -120,8 +120,8 @@
 @media (min-height: 580px) {
   .login-outer-container {
     .login-inner-container {
-      padding-top: 8em;
-      padding-bottom: 5em;
+      padding-top: 6em;
+      padding-bottom: 2em;
       top: 50%;
       transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
