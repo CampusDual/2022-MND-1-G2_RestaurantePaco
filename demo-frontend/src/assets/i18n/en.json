@@ -39,7 +39,8 @@
     "plato1":"Dish 1",
     "plato2":"Dish 2",
     "postre":"Dessert",
-    "precio":"Price"
+    "precio":"Price",
+    "OPCIONES":"OPTIONS"
   },
     "edit": {
       "nombreMenu": "Menu name",
@@ -106,6 +107,8 @@
   "surname1required": "Surname is a required field",
   "phonerequired":"Phone is a required field",
   "phonepattern": "The phone format is not correct",
-  "emailpattern": "The email format is not correct"
+  "emailpattern": "The email format is not correct",
+  "OPCIONES":"OPTIONS"
+  
   
 }

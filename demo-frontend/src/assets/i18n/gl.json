@@ -15,7 +15,8 @@
     "contacts": "Contactos",
     "logout": "Pechar sesión",
     "comandas":"Comandas",
-    "menus":"Menús"
+    "menus":"Menús",
+    "OPCIONES": "OPCIÓNS"
   },
   "language": {
     "spanish": "Castelán",
@@ -104,5 +105,7 @@
   "surname1required": "O apelido é un campo obrigatorio",
   "phonerequired":"O teléfono é un campo requirido",
   "phonepattern": "O formato do teléfono non é correcto",
-  "emailpattern": "O formato do email non é correcto"
+  "emailpattern": "O formato do email non é correcto",
+  "OPCIONES": "OPCIÓNS"
+  
 }
