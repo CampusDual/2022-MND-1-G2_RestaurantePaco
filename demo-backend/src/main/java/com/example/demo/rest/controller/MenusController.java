@@ -89,7 +89,7 @@ public class MenusController {
 	 * @since 0.0.5
 	 */
 	@PostMapping(path = "/getMenus", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	@PreAuthorize("hasAnyAuthority('MENUS')")
+	@PreAuthorize("hasAnyAuthority('MENUS','CONTACTS')")
 	public @ResponseBody DataSourceRESTResponse<List<MenusDTO>> getMenus(@RequestBody AnyPageFilter pageFilter) {
 		LOGGER.info("getMenus in progress...");
 		DataSourceRESTResponse<List<MenusDTO>> dres = new DataSourceRESTResponse<>();
